@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="css/material-icons.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="verEmpleado copy.css">
+	<script src="js/acciones.js"></script>
+	<title>Ver empleados</title>
+</head>
+
+<body>
+	<header>
+		<div class="logo"><b>InnovPlast</b></div>
+		<div class="icono">
+			<input class="buscador" type="search" placeholder="Buscar producto">
+			<input type="submit" class="material-icons-outlined btn_lupa" value="search">
+		</div>
+		<nav>
+			<ul id="menucito">
+				<li><a href="#"></i>Inicio</a></li>
+				<li><a href="#"></i>Productos</a></li>
+				<li><a href="#"></i>Login</a></li>
+				<li><a href="#"></i>Registrase</a></li>
+			</ul>
+			<label id="menuIcon" onclick="mostrarMenu()">
+				<span class="material-icons-outlined">menu</span>
+			</label>
+		</nav>
+	</header>
+	<main>
+		<div class="main-VerEmpleado">
+			<h2>Listado de empleados</h2>
+			<div class="titulo-verEmpleado">
+				<a class="agregarEmpleado letra-blanca" href="?slug=agregarEmpleado">+ Añadir empleado</a>
+				<div class="contenedor">
+					<input type="search" placeholder="Buscar empleado">
+					<input type="submit" class="material-icons-outlined" value="search">
+				</div>
+			</div>
+			<section class="productos">
+                <a href="#">
+                    <div class="info-contenedor ">
+						<i class="fa-regular fa-user-pen icon-absolute"></i>
+						<div class="contenedor_produ">
+							<img class="imagen_produ" src="img/person.jfif" alt="">
+						</div>
+
+						<h4 class="letra-blanca">
+							{{NOMBRE}} {{APELLIDO}}
+						</h4>
+						<h5 class="letra-blanca">{{ROL}}</h5>
+
+						<div class="letra-blanca flex">
+							<p>ID:</p>
+							<p>{{ID}}</p>
+						</div>
+						<div class="letra-blanca flex">
+							<p>DNI:</p>
+							<p>{{DNI}}</p>
+						</div>
+						<div class="letra-blanca flex">
+							<p>EMAIL:</p>
+							<p>{{EMAIL}}</p>
+						</div>
+						<div class="letra-blanca flex">
+							<p>ESTADO:</p>
+							<p>{{ESTADO}}</p>
+						</div>
+                    </div>
+                </a>
+            
+        </section>
+		</div>
+	</main>
+	<footer>
+
+	</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/material-icons.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="verEmpleado.css">
+	<script src="js/acciones.js"></script>
+	<title>Ver empleados</title>
+</head>
+
+<body>
+	<header>
+		<div class="logo"><b>InnovPlast</b></div>
+		<div class="icono">
+			<input class="buscador" type="search" placeholder="Buscar empleado">
+			<input type="submit" class="material-icons-outlined btn_lupa" value="search">
+		</div>
+		<nav>
+			<ul id="menucito">
+				<li><a href="#"></i>Inicio</a></li>
+				<li><a href="#"></i>Productos</a></li>
+				<li><a href="#"></i>Login</a></li>
+				<li><a href="#"></i>Registrase</a></li>
+			</ul>
+			<label id="menuIcon" onclick="mostrarMenu()">
+				<span class="material-icons-outlined">menu</span>
+			</label>
+		</nav>
+	</header>
+	<main>
+		<div class="main-VerEmpleado">
+			<h2>Listado de empleados</h2>
+			<div class="titulo-verEmpleado">
+				<a class="agregarEmpleado letra-blanca" href="?slug=agregarEmpleado">+ Añadir empleado</a>
+				<div class="contenedor">
+					<input type="search" placeholder="Buscar empleado">
+					<input type="submit" class="material-icons-outlined" value="search">
+				</div>
+			</div>
+			<section class="table-body">
+				<table class="tabla-empleado">
+					<tr>
+						<th>ID</th>
+						<th>Nombre y Apellido</th>
+						<th>Email</th>
+						<th>Dni</th>
+						<th>Rol</th>
+						<th class="fondo_negro">Estado</th>
+					</tr>
+					<tr>
+						<td>{{ID_EMPLEADOS}}</td>
+						<td>{{NOMBRE}}{{APELLIDO}}</td>
+						<td>{{EMAIL}}</td>
+						<td>{{DNI}}</td>
+						<td>{{ROL}}</td>
+						<td>
+							<p class="estado-conteiner estado"> {{ESTADO}} </p>
+						</td>
+						<td><a class="letra-blanca" href="?slug=modificarEmpleado&id={{ID_EMPLEADOS}}">Modificar</a></td>
+
+					</tr>
+				</table>
+			</section>
+		</div>
+	</main>
+	<footer>
+
+	</footer>
+
+</body>
+
+</html>

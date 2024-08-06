@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/estilos.css">
+	<title>Agregar empleado</title>
+</head>
+<body>
+	<h1>Agregar Empleado</h1>
+	<form action="" method="POST">
+		Nombre:<input type="text" name="txt_nombre" placeholder="Nombre" required><br>
+		Apellido:<input type="text" name="txt_apellido" placeholder="Apellido" required><br>
+		Email:<input type="email" name="txt_email" placeholder="email@gmail.com" required><br>
+		Dni:<input type="text" name="txt_dni" placeholder="Dni" required><br>
+		Rol: <select name="rol" required>
+        <option value="1">Admin.</option>
+        <option value="2">Operario</option>
+      </select>
+		<input type="submit" name="btn_agregar" value="Agregar"><br>
+		<!-- <div>{{MSG_LOGIN_ERROR}}</div> -->
+	</form>
+   </div>
+   <a href="?slug=verEmpleado">Volver</a>
+</div>
+</body>
+</html>

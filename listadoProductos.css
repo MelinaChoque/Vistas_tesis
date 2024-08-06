@@ -1,0 +1,25 @@
+.info-contenedor {
+    width: 30%;
+    background-color: var(--blanco);
+    border-radius: 1px;
+    cursor: pointer;
+    padding:0%;
+} 
+.contenedor_produ {
+    .imagen_produ {
+        position: relative;
+        width: 100%;
+        border-radius: 1px;
+    }
+}
+
+.icon-absolute-abajo{
+    color: var(--naranja);
+    position: absolute;
+    font-size: 10px;
+    bottom: 5px;
+    right: 0;
+    padding: 2px;;
+    cursor: pointer;
+    width: 50%;
+}
