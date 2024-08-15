@@ -1,3 +1,5 @@
+@import url(./css/fawesome-all.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -26,9 +28,10 @@ body {
     font-family: sans-serif;
     overflow-x: hidden;
     background-color: var(--violeta-claro);
+    color: white;
 }
 
-.letra-violeta {
+.letra-azul {
     color: var(--azul-oscuro);
 }
 
@@ -36,13 +39,19 @@ body {
     color: var(--blanco);
 }
 
-.letra-negra{
+.letra-negra {
     color: var(--gris-oscuro);
 }
 
-main,
-footer {
-    color: white;
+.letra-gris{
+    color: var(--gris-claro);
+}
+
+.letra-violeta{
+    color: var(--violeta-claro);
+}
+
+main{
     font-size: 1em;
     font-weight: 700;
     height: 65%;
@@ -53,19 +62,94 @@ footer {
 
 footer {
     width: 100%;
-    height: 30%;
+    height: 25%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    color: white;
     background-color: var(--violeta-claro);
     font-family: sans-serif;
-
     .info {
         height: 100%;
-        width: 30%;
+        width: 40%;
         position: relative;
-        box-shadow: 0 0 8px -3px rgb(231, 116, 116);
+        padding-bottom: 10px;
+        .redes,
+        .contactos {
+            width: 60%;
+            font-size: 25px;
+            margin: auto;
+            align-content: center;
+            justify-content: space-between;
+        }
+
+        p{
+            display: flex;
+        }
+
+        i {
+            color: white;
+            cursor: pointer;
+            padding-top: 25px;
+        }
+
+        i:hover:first-child {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            transform: scale(1.2);
+        }
+
+        i:hover:last-child {
+            color: black;
+            transform: scale(1.2);
+        }
+
+        i:hover:nth-child(2) {
+            color: blue;
+            transform: scale(1.2);
+        }
+
+        .contactos {
+            width: 70%;
+            flex-direction: column;
+            justify-content: start;
+            margin-top: 15px;
+
+            
+            p:last-child span{
+                font-size: 30px;
+            }
+
+            span{
+                font-size: 25px;
+                padding-right: 10px;
+            }
+
+
+            p:first-child span:hover{
+                color: red;
+            }
+
+            p:last-child span:hover {
+                color: green;
+            }
+        }
+    }
+
+    .derechos_autores{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 4%;
+        bottom: 0;
+        background-color: var(--gris-oscuro);
+        i{
+            margin-right: 5px;
+        }
+
     }
 
     h3 {
@@ -78,7 +162,6 @@ footer {
     }
 }
 
-
 header {
     width: 100%;
     height: 5%;
@@ -88,8 +171,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: space-between;
-
+    justify-content: space-evenly;
     .icono {
         display: flex;
         position: relative;
@@ -105,15 +187,20 @@ header {
         display: flex;
         width: 80%;
         z-index: 0;
-        background-color: var(--violeta-oscuro);
         position: relative;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: end;
 
+        li{
+            display: flex;
+            align-items: center ;
+            justify-content: end;
+            padding-right: 15px;
+        }
         ul {
             display: flex;
             width: 60%;
-            justify-content: space-evenly;
+            justify-content: end;
         }
 
         ul li a {
@@ -138,6 +225,10 @@ img {
     display: none;
 }
 
+.logo{
+    height: 75px;
+    width: 100px;
+}
 
 /* INPUTS Y BOTONES */
 
@@ -152,6 +243,7 @@ img {
     cursor: pointer;
     padding: 5px;
     margin-bottom: 30px;
+    
 }
 
 .btn_registro {
@@ -230,13 +322,9 @@ img {
 
 .flex {
     display: flex;
-
     justify-content: start;
     padding: 5px;
 }
-
-
-
 
 
 @media (max-width: 1100px) {
@@ -292,9 +380,30 @@ img {
     right: 0;
 }
 
+.p12R{
+    padding-right: 12px;
+}
+
+.p12L{
+    padding-left: 12px;
+}
+
+.font-17 {
+    font-size: 17px;
+
+}
+
+.font-12{
+    font-size: 15px;
+}
+
+.p10{
+    padding: 10px;
+}
+
 /* Pantallas mas chicas*/
 /* 
 footer{
     flex-direction: column;
     padding: 20px;
-} */
+}

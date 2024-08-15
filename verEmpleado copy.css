@@ -4,7 +4,7 @@
     place-items: center;
 
     h2 {
-        padding: 30px 30px 30px 20px;
+        padding: 10px;
         text-align: left;
     }
 
@@ -20,11 +20,17 @@
             padding: 10px 25px 10px 25px;
             border-radius: 15px;
         }
+        .buscador{
+            border-radius: 10px 0 0 10px;
+
+        }
+        .btn_lupa{
+            border-radius: 0 10px 10px 0;
+        }
 
     }
     .icon-absolute {
         background: transparent;
-        border: 1px solid var(--naranja);
         border-radius: 5px;
         color: var(--naranja);
         position: absolute;
@@ -38,7 +44,6 @@
     h4 {
         padding: 10px;
     }
-
 
 }
 

@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-   
-    <link rel="stylesheet" href="estilos.css">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/material-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
 </head>
+
 <body>
-<header>
-    <div class="logo"><b>InnovPlast</b></div>
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
+        </div>
         <div class="icono">
             <input class="buscador" type="search" placeholder="Buscar producto">
             <input type="submit" class="material-icons-outlined btn_lupa" value="search">
         </div>
-    <nav>   
+        <nav>
             <ul id="menucito">
-                <li><a href="#"></i>Inicio</a></li>
-                <li><a href="#"></i>Productos</a></li>
-                <li><a href="#"></i>Login</a></li>
-                <li><a href="#"></i>Registrase</a></li>
+                <li><a href="./listadoProductosView.html"></i><b>Inicio</b></a></li>
+                <li><a href="./listadoProductosView.html"></i>Productos</a></li>
+                <li><a href="./login.html"></i>Login</a></li>
+                <li><a href="./registro.html"></i>Registrase</a></li>
             </ul>
-        <label id="menuIcon" onclick="mostrarMenu()">
-            <span class="material-icons-outlined">menu</span>
-        </label>
-    </nav>
-</header>
-<main>  
-     hola
-</main>
+            <label id="menuIcon" onclick="mostrarMenu()">
+                <span class="fa-regular fa-bars precio"></span>
+            </label>
+        </nav>
+    </header>
+    <main>
+        <i class="fa-solid fa-right-to-bracket"></i>
+    </main>
 
-<footer>
-    <div class="info">
-        <h3 class="letra-violeta">Sobre nosotros</h3>
-        <p>
-            Somos la compañía ACME destinada al desarrollo en base a la industria con tecnología 4.0.
-        </p>
-    </div>
-    <div class="info ">
-        <h3 class="letra-violeta">Contactos</h3>
-        <p>
-            Somos la compañía ACME destinada al desarrollo en base a la industria con tecnología 4.0.
-        </p>
-    </div> 
-    <div class="info">
-        <h3 class="letra-violeta">Redes sociales</h3>
-        <p>
-            Somos la compañía ACME destinada al desarrollo en base a la industria con tecnología 4.0.
-        </p>
-    </div> 
-</footer>
+    <footer>
+        <div class="info">
+            <h3 class="letra-violeta">Compañia</h3>
+            <div class="flex contactos">
+                <p class="font-17">Sobre nosotros</p>
+                <p class="font-17">Nuestros servicios</p>
+                <p class="font-17">Politica de privacidad</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3 class="letra-violeta">Seguinos en las Redes</h3>
+            <div class="flex redes">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+        <div class="info">
+            <h3 class="letra-violeta">Contactanos</h3>
+            <div class="flex contactos">
+                <p class="font-17"><span class="fa-regular fa-envelope"></span> Contacto.innovplast@gmail.com</p>
+                <p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
+            </div>
+        </div>
+        <div class="derechos_autores">
+            <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
 
-<script src="js/acciones.js"></script>
+    </footer>
+
+    <script src="js/acciones.js"></script>
 </body>
+
 </html>
