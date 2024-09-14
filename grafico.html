@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
-
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/material-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
     <header class="hiden">
         <div class="logo">
@@ -35,10 +32,39 @@
             </ul>
         </nav>
     </header>
-    <main  class="hiden" style="overflow-y:scroll;">
-        <i class="fa-solid fa-right-to-bracket"></i>
-    </main>
+    <main  class="hiden main-grafico" style="overflow-y:scroll;">
+        <div class="titulo_productos">
+            <div class="content-title">Grafico de no se que fecha</div>
+                <div class="flex">
+                    <div>Generar archivo:</div>
+                    <div class="info_esta">
+                        <i class="fa-regular fa-file-pdf"></i>
+                        Descargar pdf
+                    </div>
+                    <div class="info_esta">
+                        <i class="fa-regular fa-file-xls"></i>
+                        Descargar xlsx
+                    </div>
+                    <div class="info_esta">
+                        <i class="fa-regular fa-file"></i>
+                        Descargar ccv
+                    </div>
+                </div>
+        </div>
 
+
+        <div class="panel_admin">
+            <div class="content_panel">
+                <div class="titulo_productos">
+                    Gráfico en tiempo real
+                </div>
+                <div id="chart-container">
+                    <canvas id="donutChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </main>
     <footer  class="hiden">
         <div class="info">
             <h3 class="letra-violeta">Compañia</h3>
@@ -68,12 +94,7 @@
         </div>
 
     </footer>
-
-
-
-
-    
-    <script src="js/acciones.js"></script>
+    <script src="./js/grafico.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
-
 </html>

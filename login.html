@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
     <div class="main-login">
         <div class="logo">
             <a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
-        </div>  
+        </div>
         <div class="contenedor-login">
             <div class="login letra-blanca">
-                <form class="agrandar" action="">
-                    <h2>INICIAR SESIÓN</h2>
-                    <h4>Completa para continuar.</h4>
+                <form action="">
+                    <h3 class="p10">INICIAR SESIÓN</h3>
+                    <h5 class="p10">Completa para continuar.</h5>
+                    <div class="fila">
+                        <h5 class="txt">Email</h5>
+                        <i class="fa-regular fa-envelope mb4"></i>
+                        <input class="linea_registro" type="text" placeholder="Hello@reallygreatsite.com">
 
-                    <h3>Email</h3>
-                    <i class="fa-regular fa-envelope flex"></i>
-                    <input class="linea_registro" type="text" placeholder="Hello@reallygreatsite.com">
+                    </div>
+                    <div class="fila">
 
-                    <h3>Contraseña</h3>
-                    <i class="fa-regular fa-lock flex"></i>
-                    <input class="linea_registro" type="password" placeholder="Ingrese su Contraseña">
+
+                        <h5 class="txt">Contraseña</h5>
+                        <i class="fa-regular fa-lock mb4"></i>
+                        <i class="fa-light fa-eye pa r0" id="togglePassword"> </i>
+                        <input class="linea_registro" type="password" placeholder="Ingrese su Contraseña "
+                            id="id_password">
+
+                    </div>
                     <input type="submit" value="Iniciar sesión" class="btn_registro">
-                    <h4>¿Olvidaste tu contraseña?</h4>
-                    <h4><a href="registro.html">No tenes cuenta? Registrate</a></h4>
+                    <h5 class="p10">¿Olvidaste tu contraseña?</h5>
+                    <h5 class="p10"><a href="registro.html">No tenes cuenta? Registrate</a></h4>
                 </form>
             </div>
         </div>
         <div class="imagen_login"><img src="img/Innovplast_Mano.png" alt=""></div>
     </div>
-    
+
 </body>
+<script src="./js/ojito.js"></script>
+
 </html>

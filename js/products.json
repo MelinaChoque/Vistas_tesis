@@ -1,0 +1,52 @@
+{
+    "fingerprint": "7b882e5cd7b9120c1484b6a17929d3d3",
+    "load_errno": 200,
+    "load_error": "",
+    "list": [
+      {
+        "color": "Naranja",
+        "cantidad": "220",
+        "rgb": "rgba(255, 128, 0, 0.70)"
+      },
+      {
+        "color": "Negro",
+        "cantidad": "200",
+        "rgb": "rgba(0, 0, 0, 0.60)"
+      },
+      {
+        "color": "Azul",
+        "cantidad": "178",
+        "rgb": "rgba(0, 0, 255, 0.60)"
+      },
+      {
+        "color": "Amarillo",
+        "cantidad": "160",
+        "rgb": "rgba(255, 192, 5, 0.70)"
+      },
+      {
+        "color": "Violeta",
+        "cantidad": "150",
+        "rgb": "rgba(255, 0, 255, 0.60)"
+      },
+      {
+        "color": "Blanco",
+        "cantidad": "145",
+        "rgb": "rgba(250,250,250, 0.90)"
+      },
+      {
+        "color": "Gris",
+        "cantidad": "138",
+        "rgb": "rgba(180,180,180, 0.80)"
+      },
+      {
+        "color": "Verde",
+        "cantidad": "130",
+        "rgb": "rgba(0, 255, 0, 0.60)"
+      },
+      {
+        "color": "Rojo",
+        "cantidad": "100",
+        "rgb": "rgba(255, 0, 0, 0.60)"
+      }
+    ]
+  }

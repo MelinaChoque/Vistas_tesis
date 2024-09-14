@@ -4,71 +4,111 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 	<link rel="stylesheet" href="css/material-icons.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 	<link rel="stylesheet" href="estilos.css">
-	<link rel="stylesheet" href="verEmpleado.css">
 	<script src="js/acciones.js"></script>
 	<title>Ver empleados</title>
 </head>
 
 <body>
 	<header>
-		<div class="logo"><b>InnovPlast</b></div>
+		<div class="logo">
+			<a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
+		</div>
 		<div class="icono">
-			<input class="buscador" type="search" placeholder="Buscar empleado">
+			<input class="buscador" type="search" placeholder="Buscar producto">
 			<input type="submit" class="material-icons-outlined btn_lupa" value="search">
 		</div>
 		<nav>
 			<ul id="menucito">
-				<li><a href="#"></i>Inicio</a></li>
-				<li><a href="#"></i>Productos</a></li>
-				<li><a href="#"></i>Login</a></li>
-				<li><a href="#"></i>Registrase</a></li>
+				<li><a href="./listadoProductosView.html"></i>Productos</a></li>
+				<li><a href="./login.html"></i>Panel</a></li>
+				<li><a href="./login.html"></i>Estadisticas</a></li>
+				<li><i class="fa-solid fa-user"></i><a href="./login.html"></i>Admin</a></li>
+				<li><i class="fa-light fa-cart-shopping"></i></li>
 			</ul>
+
 			<label id="menuIcon" onclick="mostrarMenu()">
 				<span class="material-icons-outlined">menu</span>
 			</label>
 		</nav>
 	</header>
 	<main>
-		<div class="main-VerEmpleado">
+		<section class="main-VerEmpleado">
 			<h2>Listado de empleados</h2>
 			<div class="titulo-verEmpleado">
-				<a class="agregarEmpleado letra-blanca" href="?slug=agregarEmpleado">+ Añadir empleado</a>
-				<div class="contenedor">
-					<input type="search" placeholder="Buscar empleado">
-					<input type="submit" class="material-icons-outlined" value="search">
+				<a class="agregarEmpleado letra-blanca" href="?slug=agregarEmpleado">
+					<i class="fa-solid fa-plus"></i>
+					Añadir empleado
+				</a>
+				<div class="flex">
+					<input class="buscador" type="search" placeholder="Buscar empleado">
+					<input type="submit" class="material-icons-outlined btn_lupa" value="search">
 				</div>
 			</div>
-			<section class="table-body">
-				<table class="tabla-empleado">
-					<tr>
-						<th>ID</th>
-						<th>Nombre y Apellido</th>
-						<th>Email</th>
-						<th>Dni</th>
-						<th>Rol</th>
-						<th class="fondo_negro">Estado</th>
-					</tr>
-					<tr>
-						<td>{{ID_EMPLEADOS}}</td>
-						<td>{{NOMBRE}}{{APELLIDO}}</td>
-						<td>{{EMAIL}}</td>
-						<td>{{DNI}}</td>
-						<td>{{ROL}}</td>
-						<td>
-							<p class="estado-conteiner estado"> {{ESTADO}} </p>
-						</td>
-						<td><a class="letra-blanca" href="?slug=modificarEmpleado&id={{ID_EMPLEADOS}}">Modificar</a></td>
+			<section class="container_productos">
+				<a href="#">
+					<div class="info-contenedor ">
+						<i class="fa-regular fa-pen-to-square icon-absolute"></i>
+						<div class="contenedor_produ">
+							<img class="imagen_produ" src="img/person.jfif" alt="">
+						</div>
 
-					</tr>
-				</table>
+						<h4 class="letra-blanca">
+							{{NOMBRE}} {{APELLIDO}}
+						</h4>
+						<h5 class="letra-blanca">{{ROL}}</h5>
+
+						<div class="letra-blanca flex">
+							<p>ID:</p>
+							<p>{{ID}}</p>
+						</div>
+						<div class="letra-blanca flex">
+							<p>DNI:</p>
+							<p>{{DNI}}</p>
+						</div>
+						<div class="letra-blanca flex">
+							<p>EMAIL:</p>
+							<p>{{EMAIL}}</p>
+						</div>
+						<div class="letra-blanca flex">
+							<p>ESTADO:</p>
+							<p>{{ESTADO}}</p>
+						</div>
+					</div>
 			</section>
-		</div>
+			</div>
 	</main>
+
 	<footer>
+		<div class="info">
+			<h3 class="letra-azul">Compañia</h3>
+			<div class="flex contactos">
+				<p class="font-17">Sobre nosotros</p>
+				<p class="font-17">Nuestros servicios</p>
+				<p class="font-17">Politica de privacidad</p>
+			</div>
+		</div>
+		<div class="info">
+			<h3 class="letra-azul">Seguinos en las Redes</h3>
+			<div class="flex redes">
+				<i class="fa-brands fa-instagram"></i>
+				<i class="fa-brands fa-facebook"></i>
+				<i class="fa-brands fa-tiktok"></i>
+			</div>
+		</div>
+		<div class="info">
+			<h3 class="letra-azul">Contactanos</h3>
+			<div class="flex contactos">
+				<p class="font-17"><span class="fa-regular fa-envelope"></span> Contacto.innovplast@gmail.com</p>
+				<p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
+			</div>
+		</div>
+		<div class="derechos_autores">
+			<p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+		</div>
 
 	</footer>
 
