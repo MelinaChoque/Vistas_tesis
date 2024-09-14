@@ -348,13 +348,13 @@ img {
     width: 100%;
     background-color: var(--azul-oscuro);
     display: flex;
-
+    flex-direction: column;
     .logo {
         top: 25px;
         left: 25px;
-        position: absolute;
-        height: 130px;
-        width: 180px;
+        position: relative;
+        height: 20%;
+        width: 90%;
     }
 
     .contenedor-login {
@@ -1025,28 +1025,23 @@ main.main-informes {
     }
 
     .main-login {
-        .logo {
-            top: 35px;
-            left: 15px;
-            height: 120px;
-            width: 150px;
-        }
 
         .contenedor-login {
             display: flex;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
-            width: 90%;
+            width: 65%;
             height: 100%;
 
             .login {
-                padding: 50px;
-            }
+                width: 50%;
+                padding: 30px;
 
+            }
         }
 
         .imagen_login {
-            display: none;
+            height: 50%;
         }
     }
     
@@ -1073,41 +1068,12 @@ main.main-informes {
             }
         }
     }
-
     
     
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
-    .main-login {
-
-        .logo {
-            display: flex;
-            width: 90%;
-            justify-content: center;
-        }
-
-        .contenedor-login {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 65%;
-            height: 80%;
-
-
-            .login {
-                margin-top: 25px;
-                width: 85%;
-                padding: 30px;
-                height: 80%;
-            }
-        }
-
-        .imagen_login {
-            display: none;
-        }
-    }
-
+    
 
     header {
 
@@ -1220,6 +1186,10 @@ main.main-informes {
             }
         }
     }
+
+    .imagen_login {
+        display: none;
+    }
     .derechos_autores{
         z-index: 1;
     }
@@ -1232,6 +1202,30 @@ main.main-informes {
     main{
         height: 92%;
     }
+
+    .main-login {
+        height: 100%;
+        width: 100%;
+        .logo {
+            display: flex;
+            width: 90%;
+            justify-content: center;
+        }
+        .contenedor-login {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 90%;
+            height: 80%;
+
+            .login {
+                width: 100%;
+                padding: 30px;
+
+            }
+        }
+    }
+
 }
 
 @media (max-width: 340px){
@@ -1295,32 +1289,7 @@ main.main-informes {
     }
 
 
-    .main-login {
-        .logo {
-            display: flex;
-            width: 90%;
-            justify-content: center;
-        }
 
-        .contenedor-login {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            margin-top: 15px;
-
-            .login {
-                width: 95%;
-                padding: 30px;
-
-            }
-        }
-
-        .imagen_login {
-            display: none;
-        }
-    }
     
     .main-productos {
 
@@ -1364,8 +1333,32 @@ main.main-informes {
     main{
         height: 92%;
     }
-    main{
-        height: 91%;
+
+    .imagen_login{
+        display: none;
+    }
+
+    .main-login {
+        height: 100%;
+        width: 100%;
+        .logo {
+            display: flex;
+            width: 90%;
+            justify-content: center;
+        }
+        .contenedor-login {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+            height: 80%;
+
+            .login {
+                width: 100%;
+                padding: 30px;
+
+            }
+        }
     }
 }
 .mostrar {
