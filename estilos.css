@@ -57,7 +57,7 @@ body {
 main {
     font-size: 1em;
     font-weight: 700;
-    height: calc(100vh - 20vh - 60px);
+    height: 69%;
     width: 100%;
     background-color: var(--azul-oscuro);
     padding: 2em 1em;
@@ -70,7 +70,7 @@ main {
 
 footer {
     width: 100%;
-    height: 20vh;
+    height: 20%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -191,22 +191,33 @@ footer {
 
 header {
     width: 100%;
-    height: 60px;
+    height: 7%;
     background-color: var(--violeta-oscuro);
     color: var(--blanco);
-    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
+    .cajita-header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo{
+        display: flex;
+        width: 20%;
+        height: 80px;
+    }
     nav {
         display: flex;
-        width: 80%;
         z-index: 0;
         position: relative;
         align-items: center;
         justify-content: end;
+        width: 40%;
 
         ul {
             display: flex;
@@ -240,11 +251,12 @@ header {
 .icono {
     display: flex;
     position: relative;
-    width: 40%;
+    width: 50%;
     height: 30px;
     line-height: 35px;
     align-items: end;
-    justify-content: end;
+    justify-content: center;
+
 }
 
 img {
@@ -257,10 +269,6 @@ img {
     display: none;
 }
 
-.logo {
-    height: 75px;
-    width: 100px;
-}
 
 /* INPUTS Y BOTONES */
 
@@ -420,9 +428,13 @@ img {
     }
 
     h3 {
+        text-wrap: nowrap;
         padding-top: 10px;
     }
 
+    h5.p10{
+        text-wrap: nowrap;
+    }
 
     .txt {
         text-align: left;
@@ -916,9 +928,6 @@ main.main-informes {
 
 
 @media (max-width: 1100px) {
-    .logo {
-        width: 20%;
-    }
 
     .main-login {
         .logo {
@@ -961,7 +970,6 @@ main.main-informes {
         }
     }
     .main-productos {
-        background-color: #64c1ec;
         .info-contenedor {
             flex: 0 0 calc(90%/3 - 15px - 0.5em);
         }
@@ -971,13 +979,8 @@ main.main-informes {
 
 
 /* Tablets medianas y pantallas de escritorio pequeñas */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 992px) {
     header {
-        .icono {
-            width: 80%;
-            justify-content: left;
-            align-items: start;
-        }
 
         nav {
             position: absolute;
@@ -1001,7 +1004,7 @@ main.main-informes {
                 height: calc(100vh - 96px);
                 top: 60px;
                 right: -100%;
-                background-color: var(--violeta-claro);
+                background-color: var(--violeta-oscuro);
             }
 
             ul li {
@@ -1046,37 +1049,57 @@ main.main-informes {
             display: none;
         }
     }
+    
 }
 
-/* Celulares grandes y tablets pequeñas */
-
-@media (min-width: 375px) and (max-width: 768px) {
-
-    .hide_mobile {
-        display: none;
+@media (max-width: 576px) {
+    
+    .main-empleado{
+        .agrandar {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            .Cammpo_registro{
+                width: 100%;
+                .alineacion_izq{
+                    text-align: center;
+                }
+            }
+            .btn_registro{
+                width: 100%;
+            }
+            .Cammpo_btn{
+                width:260px;
+            }
+        }
     }
 
+    
+    
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
     .main-login {
+
         .logo {
             display: flex;
-            width: 100%;
+            width: 90%;
             justify-content: center;
-            margin-bottom: 45px;
         }
 
         .contenedor-login {
             display: flex;
-            justify-content: start;
+            justify-content: center;
             align-items: center;
-            width: 90%;
-            height: 65%;
+            width: 65%;
+            height: 80%;
 
 
             .login {
-                width: 100%;
+                margin-top: 25px;
+                width: 85%;
                 padding: 30px;
-                height: 100%;
-
+                height: 80%;
             }
         }
 
@@ -1087,12 +1110,22 @@ main.main-informes {
 
 
     header {
-        .icono {
-            width: 80%;
-            justify-content: left;
-            align-items: start;
-        }
 
+        .icono {
+            display: flex;
+            position: relative;
+            width: 85%;
+            height: 30px;
+            line-height: 25px;
+
+            justify-content: start;
+        
+        }
+        .logo{
+            display: flex;
+            width: 15%;
+            height: 64px;
+        }
         nav {
             position: absolute;
             display: block;
@@ -1112,7 +1145,7 @@ main.main-informes {
                 display: none;
                 position: absolute;
                 width: 80%;
-                height: calc(100vh - 96px);
+                height: calc(90vh - 7%);
                 top: 60px;
                 right: -100%;
                 background-color: var(--violeta-claro);
@@ -1120,30 +1153,24 @@ main.main-informes {
 
             ul li {
                 margin-top: 20px;
-                margin-left: 20px;
-                width: 80%;
+                margin-left: 50px;
+                width: 50%;
                 height: 40px;
                 position: relative;
-                justify-content: start;
+                justify-content: flex-start;
                 align-items: center;
             }
 
             .mostrar {
                 display: inline-block;
-                top: 26px;
+                top: 45px;
+                width: 200%;
             }
         }
     }
 
-    .show_derechos {
-        display: block;
-    }
-    main{
-        height: 91%;
-    }
-
     .main-productos {
-
+        height: 90%;
         .info-contenedor {
             flex: 0 0 calc(90%/2 - 15px - 0.5em);
             border-radius: 15px 15px 10px 10px;
@@ -1151,11 +1178,10 @@ main.main-informes {
             background-color: rgb(207, 204, 204);
             box-shadow: 5px 5px 5px -5px var(--gris-claro);
     
-        
         }
+     }
 
-    }
-
+    
     
     .main-grafico {
         .flex {
@@ -1168,27 +1194,124 @@ main.main-informes {
             }
         }
     }
-}
+    
 
-@media (max-width: 320px){
-    .main-login {
-        background-color: #5AC25B;
-        .logo {
+    .main-empleado{
+        .agrandar {
+            width: 90%;
+        }
+    }
+
+    main.main-panel-Admin{
+        padding: 0%;
+        .titulo_productos{
             display: flex;
             width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 5px;
+        }
+        .panel_admin{
+            flex-direction: column;
+            width: 100%;
+            .content_panel{
+                width: 99%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .derechos_autores{
+        z-index: 1;
+    }
+    .hide_mobile {
+        display: none;
+    }
+    .show_derechos {
+        display: block;
+    }
+    main{
+        height: 92%;
+    }
+}
+
+@media (max-width: 340px){
+    header {
+        .logo{
+            display: none;
+        }
+
+        .icono {
+            display: flex;
+            position: relative;
+            width: 80%;
+            height: 30px;
+            line-height: 25px;
+            justify-content: start;        
+            .buscador{
+                width: 200px;
+            }
+        }
+        nav {
+            position: absolute;
+            display: block;
+            right: 0;
+            width: 50%;
+            z-index: 1;
+
+            #menuIcon {
+                display: block;
+                position: absolute;
+                right: 15px;
+                top: -10px;
+                cursor: pointer;
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                width: 80%;
+                height: calc(90vh - 7%);
+                top: 60px;
+                right: -100%;
+                background-color: var(--violeta-claro);
+            }
+
+            ul li {
+                margin-top: 20px;
+                margin-left: 50px;
+                width: 50%;
+                height: 40px;
+                position: relative;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .mostrar {
+                display: inline-block;
+                top: 45px;
+                width: 200%;
+            }
+        }
+    }
+
+
+    .main-login {
+        .logo {
+            display: flex;
+            width: 90%;
             justify-content: center;
         }
 
         .contenedor-login {
             display: flex;
-            justify-content: start;
-            align-items: end;
-            width: 98%;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
             height: 100%;
-
+            margin-top: 15px;
 
             .login {
-                width: 100%;
+                width: 95%;
                 padding: 30px;
 
             }
@@ -1197,6 +1320,52 @@ main.main-informes {
         .imagen_login {
             display: none;
         }
+    }
+    
+    .main-productos {
+
+        .info-contenedor {
+            flex: 0 0 calc(90%/1 - 15px - 0.5em);
+            border-radius: 15px 15px 10px 10px;
+            cursor: pointer;
+            background-color: rgb(207, 204, 204);
+            box-shadow: 5px 5px 5px -5px var(--gris-claro);
+    
+        
+        }
+    }
+
+    .main-empleado{
+
+        .agrandar {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            .Cammpo_registro{
+                width: 100%;
+                .alineacion_izq{
+                    text-align: center;
+                }
+            }
+            .btn_registro{
+                width: 100%;
+            }
+            .Cammpo_btn{
+                width:260px;
+            }
+        }
+    }
+    .hide_mobile {
+        display: none;
+    }
+    .show_derechos {
+        display: block;
+    }
+    main{
+        height: 92%;
+    }
+    main{
+        height: 91%;
     }
 }
 .mostrar {

@@ -15,33 +15,36 @@
 
 <body>
     <header class="hiden">
-        <div class="logo">
-            <a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
+        <div class="flex cajita-header">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
+            </div>
+            <div class="icono">
+                <input class="buscador" type="search" placeholder="Buscar producto">
+                <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+            </div>
+            <nav>
+                <label id="menuIcon" onclick="mostrarMenu()">
+                    <span class="fa-solid fa-bars precio"></span>
+                </label>
+    
+                <ul id="menucito">
+                    <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a></li>
+                    <li><i class="fa-solid fa-shop"></i><a href="./listadoProductosView.html">Productos</a></li>
+                    <li><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html">Iniciar sesión</a></li>
+                    <li><i class="fa-solid fa-user-plus"></i><a href="./registro.html">Registrarse</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="icono">
-            <input class="buscador" type="search" placeholder="Buscar producto">
-            <input type="submit" class="material-icons-outlined btn_lupa" value="search">
-        </div>
-        <nav>
-            <label id="menuIcon" onclick="mostrarMenu()">
-                <span class="fa-solid fa-bars precio"></span>
-            </label>
-
-            <ul id="menucito">
-                <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a></li>
-                <li><i class="fa-solid fa-shop"></i><a href="./listadoProductosView.html">Productos</a></li>
-                <li><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html">Iniciar sesión</a></li>
-                <li><i class="fa-solid fa-user-plus"></i><a href="./registro.html">Registrarse</a></li>
-            </ul>
-        </nav>
     </header>
+
     <main  class="hiden" style="overflow-y:scroll;">
         <i class="fa-solid fa-right-to-bracket"></i>
     </main>
 
-    <footer  class="hiden">
+    <footer class="hide_mobile">
         <div class="info">
-            <h3 class="letra-violeta">Compañia</h3>
+            <h5 class="letra-blanca">Compañia</h5>
             <div class="flex contactos">
                 <p class="font-17">Sobre nosotros</p>
                 <p class="font-17">Nuestros servicios</p>
@@ -49,7 +52,7 @@
             </div>
         </div>
         <div class="info">
-            <h3 class="letra-violeta">Seguinos en las Redes</h3>
+            <h5 class="letra-blanca">Seguinos en las Redes</h5>
             <div class="flex redes">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-facebook"></i>
@@ -57,7 +60,7 @@
             </div>
         </div>
         <div class="info">
-            <h3 class="letra-violeta">Contactanos</h3>
+            <h5 class="letra-blanca">Contactanos</h5>
             <div class="flex contactos">
                 <p class="font-17"><span class="fa-regular fa-envelope"></span> Contacto.innovplast@gmail.com</p>
                 <p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
@@ -68,7 +71,11 @@
         </div>
 
     </footer>
-
+    <div class="show_derechos hiden">
+        <div class="derechos_autores">
+            <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+    </div>
 
 
 
