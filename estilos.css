@@ -81,11 +81,11 @@ footer {
     text-wrap: nowrap;
 
     .info {
+        display: flex;
         height: 100%;
-        width: 40%;
+        width: 30%;
         position: relative;
-        padding-bottom: 10px;
-
+        flex-direction: column;
         .redes,
         .contactos {
             width: 60%;
@@ -123,11 +123,9 @@ footer {
         }
 
         .contactos {
-            width: 70%;
             flex-direction: column;
             justify-content: start;
-            margin-top: 15px;
-
+            width: auto;
 
             p:last-child span {
                 font-size: 30px;
@@ -199,18 +197,19 @@ header {
     align-items: center;
     justify-content: space-around;
 
-    .cajita-header{
+    .cajita-header {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .logo{
+    .logo {
         display: flex;
         width: 20%;
         height: 80px;
     }
+
     nav {
         display: flex;
         z-index: 0;
@@ -349,6 +348,7 @@ img {
     background-color: var(--azul-oscuro);
     display: flex;
     flex-direction: column;
+
     .logo {
         top: 25px;
         left: 25px;
@@ -432,7 +432,7 @@ img {
         padding-top: 10px;
     }
 
-    h5.p10{
+    h5.p10 {
         text-wrap: nowrap;
     }
 
@@ -969,6 +969,7 @@ main.main-informes {
             }
         }
     }
+
     .main-productos {
         .info-contenedor {
             flex: 0 0 calc(90%/3 - 15px - 0.5em);
@@ -976,12 +977,18 @@ main.main-informes {
     }
 }
 
-
-
-/* Tablets medianas y pantallas de escritorio pequeñas */
-@media (min-width: 768px) and (max-width: 992px) {
+/* Tablets grandes y pantallas medianas (hasta 992px) */
+@media (max-width: 992px) {
     header {
-
+        .logo {
+            display: flex;
+            width: 30%;
+            height: 80px;
+        }
+        .icono{
+            width: 100%;
+            justify-content:flex-start;
+        }
         nav {
             position: absolute;
             display: block;
@@ -1019,13 +1026,12 @@ main.main-informes {
 
             .mostrar {
                 display: block;
-                top: 30px;
+                top: 20px;
             }
         }
     }
 
     .main-login {
-
         .contenedor-login {
             display: flex;
             justify-content: start;
@@ -1044,59 +1050,25 @@ main.main-informes {
             height: 50%;
         }
     }
-    
 }
 
-@media (max-width: 576px) {
-    
-    .main-empleado{
-        .agrandar {
-            display: flex;
-            flex-direction: column;
-            width: 90%;
-            .Cammpo_registro{
-                width: 100%;
-                .alineacion_izq{
-                    text-align: center;
-                }
-            }
-            .btn_registro{
-                width: 100%;
-            }
-            .Cammpo_btn{
-                width:260px;
-            }
-        }
-    }
-    
-    
-}
-
-@media (min-width: 375px) and (max-width: 768px) {
-    
+/* Tablets pequeñas y celulares grandes (hasta 768px) */
+@media (max-width: 768px) {
 
     header {
-
-        .icono {
+        .logo {
             display: flex;
-            position: relative;
-            width: 85%;
-            height: 30px;
-            line-height: 25px;
-
-            justify-content: start;
-        
+            width: 20%;
+            height: 80px;
         }
-        .logo{
-            display: flex;
-            width: 15%;
-            height: 64px;
+        .icono{
+            width: 60%;
         }
         nav {
             position: absolute;
             display: block;
             right: 0;
-            width: 50%;
+            width: 35%;
             z-index: 1;
 
             #menuIcon {
@@ -1111,7 +1083,7 @@ main.main-informes {
                 display: none;
                 position: absolute;
                 width: 80%;
-                height: calc(90vh - 7%);
+                height: calc(100vh - 96px);
                 top: 60px;
                 right: -100%;
                 background-color: var(--violeta-claro);
@@ -1119,38 +1091,41 @@ main.main-informes {
 
             ul li {
                 margin-top: 20px;
-                margin-left: 50px;
-                width: 50%;
+                margin-left: 20px;
+                width: 80%;
                 height: 40px;
                 position: relative;
-                justify-content: flex-start;
+                justify-content: start;
                 align-items: center;
             }
 
             .mostrar {
-                display: inline-block;
-                top: 45px;
-                width: 200%;
+                display: block;
+                top: 30px;
             }
         }
     }
 
     .main-productos {
         height: 90%;
+
         .info-contenedor {
             flex: 0 0 calc(90%/2 - 15px - 0.5em);
             border-radius: 15px 15px 10px 10px;
             cursor: pointer;
             background-color: rgb(207, 204, 204);
             box-shadow: 5px 5px 5px -5px var(--gris-claro);
-    
-        }
-     }
 
-    
-    
-    .main-grafico {
-        .flex {
+        }
+    }
+
+    .titulo_productos {
+        text-wrap: nowrap;
+    }
+
+
+    main.main-grafico {
+        background-color: #006b21;
             .contenedor_esta {
                 width: 90%;
             }
@@ -1158,59 +1133,74 @@ main.main-informes {
             .titulo_producto {
                 width: 10%;
             }
+        .flex {
+            width: 95%;
+        }
+        .info_esta{
+            padding: 8px;
         }
     }
-    
 
-    .main-empleado{
+
+    .main-empleado {
         .agrandar {
             width: 90%;
         }
     }
 
-    main.main-panel-Admin{
+    main.main-panel-Admin {
         padding: 0%;
-        .titulo_productos{
+
+        .titulo_productos {
             display: flex;
             width: 100%;
             flex-direction: row;
             flex-wrap: wrap;
             padding: 5px;
         }
-        .panel_admin{
+
+        .panel_admin {
             flex-direction: column;
             width: 100%;
-            .content_panel{
+
+            .content_panel {
                 width: 99%;
                 margin-bottom: 15px;
             }
         }
+        
     }
 
     .imagen_login {
         display: none;
     }
-    .derechos_autores{
+
+    .derechos_autores {
         z-index: 1;
     }
+
     .hide_mobile {
         display: none;
     }
+
     .show_derechos {
         display: block;
     }
-    main{
-        height: 92%;
+
+    main {
+        height: 89%;
     }
 
     .main-login {
         height: 100%;
         width: 100%;
+
         .logo {
             display: flex;
             width: 90%;
             justify-content: center;
         }
+
         .contenedor-login {
             display: flex;
             justify-content: start;
@@ -1225,12 +1215,199 @@ main.main-informes {
             }
         }
     }
+}
+
+
+/* Celulares grandes (hasta 576px) */
+
+@media (max-width: 576px){
+    header {
+        .logo {
+            display: flex;
+            width: 20%;
+            height: 80px;
+        }
+        .icono{
+            width: 70%;
+            justify-content: flex-start;
+        }
+        nav {
+            position: absolute;
+            display: block;
+            right: 0;
+            width: 35%;
+            z-index: 1;
+
+            #menuIcon {
+                display: block;
+                position: absolute;
+                right: 15px;
+                top: -10px;
+                cursor: pointer;
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 96px);
+                top: 60px;
+                right: -100%;
+                background-color: var(--violeta-claro);
+            }
+
+            ul li {
+                margin-top: 20px;
+                margin-left: 20px;
+                width: 200%;
+                height: 40px;
+                position: relative;
+                justify-content: start;
+                align-items: center;
+            }
+
+            .mostrar {
+                display: block;
+                top: 30px;
+            }
+        }
+    }
+    main.main-grafico {
+        .flex {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .contenedor_esta {
+                width: 100%;
+            }
+
+            .titulo_producto {
+                width: 10%;
+            }
+        }
+        .content_panel{
+            height: 65%;
+            width: 100%;
+        }
+        .info_esta{
+            margin-left: 5px;
+        }
+    }
+    .main-empleado {
+        .agrandar {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+
+            .Cammpo_registro {
+                width: 100%;
+
+                .alineacion_izq {
+                    text-align: center;
+                }
+            }
+
+            .btn_registro {
+                width: 100%;
+            }
+
+            .Cammpo_btn {
+                width: 260px;
+            }
+        }
+    }
+
 
 }
 
-@media (max-width: 340px){
+
+/* Celulares medianos (hasta 480px) */
+@media (max-width: 480px) {
     header {
-        .logo{
+        .logo {
+            display: none;
+        }
+        .icono{
+            width: 65%;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        nav {
+            position: absolute;
+            display: block;
+            right: 0;
+            width: 35%;
+            z-index: 1;
+
+            #menuIcon {
+                display: block;
+                position: absolute;
+                right: 15px;
+                top: -10px;
+                cursor: pointer;
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 96px);
+                top: 60px;
+                right: -100%;
+                background-color: var(--violeta-claro);
+            }
+
+            ul li {
+                margin-top: 20px;
+                margin-left: 20px;
+                width: 100%;
+                height: 40px;
+                position: relative;
+                justify-content: start;
+                align-items: center;
+            }
+
+            .mostrar {
+                width: 150%;
+                display: block;
+                top: 30px;
+            }
+        }
+    }
+    main.main-grafico {
+        .flex {
+            width: 100%;
+            .titulo_productos{
+                height: 50%;
+            }
+            .contenedor_esta {
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            .titulo_producto {
+                width: 10%;
+            }
+        }
+        .content_panel{
+            height: 65%;
+            width: 100%;
+        }
+        .info_esta{
+            margin-bottom: 15px;
+        }
+    }
+
+}
+
+
+
+/* Estilos específicos para celulares pequeños */
+@media (max-width: 320px) {
+    header {
+        .logo {
             display: none;
         }
 
@@ -1240,11 +1417,13 @@ main.main-informes {
             width: 80%;
             height: 30px;
             line-height: 25px;
-            justify-content: start;        
-            .buscador{
+            justify-content: start;
+
+            .buscador {
                 width: 200px;
             }
         }
+
         nav {
             position: absolute;
             display: block;
@@ -1282,7 +1461,7 @@ main.main-informes {
 
             .mostrar {
                 display: inline-block;
-                top: 45px;
+                top: 26px;
                 width: 200%;
             }
         }
@@ -1290,7 +1469,7 @@ main.main-informes {
 
 
 
-    
+
     .main-productos {
 
         .info-contenedor {
@@ -1299,53 +1478,77 @@ main.main-informes {
             cursor: pointer;
             background-color: rgb(207, 204, 204);
             box-shadow: 5px 5px 5px -5px var(--gris-claro);
-    
-        
+
+
         }
     }
 
-    .main-empleado{
+    .main-empleado {
 
         .agrandar {
             display: flex;
             flex-direction: column;
             width: 90%;
-            .Cammpo_registro{
+
+            .Cammpo_registro {
                 width: 100%;
-                .alineacion_izq{
+
+                .alineacion_izq {
                     text-align: center;
                 }
             }
-            .btn_registro{
+
+            .btn_registro {
                 width: 100%;
             }
-            .Cammpo_btn{
-                width:260px;
+
+            .Cammpo_btn {
+                width: 260px;
             }
         }
     }
+
+    main.main-grafico {
+        padding: 0%;
+        .titulo_productos{
+            font-size: 20px;
+            height: 30%;
+        }
+        .info_esta{
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        .panel_admin{
+            height: 70%;
+        }
+    }
+
     .hide_mobile {
         display: none;
     }
+
     .show_derechos {
         display: block;
     }
-    main{
-        height: 92%;
+
+    main {
+        height: 89%;
     }
 
-    .imagen_login{
+    .imagen_login {
         display: none;
     }
 
     .main-login {
         height: 100%;
         width: 100%;
+
         .logo {
             display: flex;
             width: 90%;
             justify-content: center;
         }
+
         .contenedor-login {
             display: flex;
             justify-content: start;
@@ -1361,6 +1564,8 @@ main.main-informes {
         }
     }
 }
+
+
 .mostrar {
     right: 0;
 }
