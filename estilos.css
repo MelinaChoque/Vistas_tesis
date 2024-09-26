@@ -857,7 +857,6 @@ main.main-informes {
         font-size: 20px;
         height: 15%;
         width: 100%;
-        ;
     }
 
     .titulo_productos {
@@ -897,6 +896,7 @@ main.main-informes {
         background: rgba(211, 211, 211, 0.2);
         border-radius: 15px;
     }
+
 }
 
 /*FIN DE GRAFICO*/
@@ -913,9 +913,17 @@ main.main-informes {
         flex: 0 0 calc(100%/6 - 0.5em);
         border-radius: 15px 15px 10px 10px;
         cursor: pointer;
-        background-color: rgb(207, 204, 204);
-        box-shadow: 5px 5px 5px -5px var(--gris-claro);
         height: 300px;
+        
+    }
+    .container_productos{
+        .info-contenedor{
+            background: transparent;
+            box-shadow: none;
+            .titulo_productos {
+                justify-content: end;
+            }
+        }
     }
 
     #pdf_render {
