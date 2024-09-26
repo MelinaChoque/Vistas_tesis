@@ -13,30 +13,31 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
-        </div>
-        <div class="icono">
-            <input class="buscador" type="search" placeholder="Buscar producto">
-            <input type="submit" class="material-icons-outlined btn_lupa" value="search">
-        </div>
-        <nav>
-            <label id="menuIcon" onclick="mostrarMenu()">
-                <span class="fa-solid fa-bars precio"></span>
-            </label>
+	<header>
+		<div class="logo">
+			<a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
+		</div>
+		<div class="icono">
+			<input class="buscador" type="search" placeholder="Buscar producto">
+			<input type="submit" class="material-icons-outlined btn_lupa" value="search">
+		</div>
+		<nav>
+			<ul id="menucito">
+				<li><a href="./listadoProductosView.html"></i>Productos</a></li>
+				<li><a href="./login.html"></i>Panel</a></li>
+				<li><a href="./login.html"></i>Estadisticas</a></li>
+				<li><i class="fa-solid fa-user"></i><a href="./login.html"></i>User</a></li>
+				<li><i class="fa-light fa-cart-shopping"></i></li>
+			</ul>
 
-            <ul id="menucito">
-                <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a></li>
-                <li><i class="fa-solid fa-shop"></i><a href="./listadoProductosView.html">Productos</a></li>
-                <li><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html">Iniciar sesión</a></li>
-                <li><i class="fa-solid fa-user-plus"></i><a href="./registro.html">Registrarse</a></li>
-            </ul>
-        </nav>
-    </header>
+			<label id="menuIcon" onclick="mostrarMenu()">
+				<span class="material-icons-outlined">menu</span>
+			</label>
+		</nav>
+	</header>
     <main class="main-productos">
         <div class="titulo_produtos">
-            <h3>Tienda online Innovplast</h3>
+            <h4>Mi carrito</h4>
         </div>
 
         <section class="container_productos">
@@ -44,177 +45,58 @@
                 <div class="contenedor_produ">
                     <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
                 </div>
-                <h4 class="letra-negra font-title p10">
-                    Tapas rojas x 10kg
-                </h4>
-                <div class="letra-negra p10">
-                    <!-- <i class="fa-regular fa-mask precio"></i> -->
-                    <h4 class="letra-negra font-title">$20000,00</h4>
-                </div>
-                <div class="letra-negra flex font-title">
-                    <p class="p12L">Stock :</p>
-                    <p class="stock">Disponible</p>
-                </div>
-                <div class="icon-absolute-abajo flex ">
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                </div>
-                <button type="submit" value="Crear cuenta" class="btn_registro">Ver más</button>
-            </div>
-
-            <div class="info-contenedor">
-                <div class="contenedor_produ">
-                    <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
-                </div>
-                <h4 class="letra-negra font-title p10">
-                    Tapas rojas x 10kg
-                </h4>
-                <div class="letra-negra p10">
-                    <!-- <i class="fa-regular fa-mask precio"></i> -->
-                    <h4 class="letra-negra font-title">$20000,00</h4>
-                </div>
-                <div class="letra-negra flex font-title">
-                    <p class="p12L">Stock :</p>
-                    <p class="stock">Disponible</p>
-                </div>
-                <div class="icon-absolute-abajo flex ">
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
+                <div class="contenedor_info">
+                    <h4 class="letra-negra font-title p10">
+                        Tapas rojas x 10kg
+                    </h4>
+                    <div class="letra-negra p10">
+                        <!-- <i class="fa-regular fa-mask precio"></i> -->
+                        <h4 class="letra-negra font-title">$20000,00</h4>
+                    </div>
+                    <div class="letra-negra flex font-title">
+                        <p class="p12L">Stock :</p>
+                        <p class="stock">Disponible</p>
+                    </div>
+                    <div class="icon-absolute-abajo flex ">
+                        <i class="fa-solid fa-star precio"></i>
+                        <i class="fa-solid fa-star precio"></i>
+                        <i class="fa-solid fa-star precio"></i>
+                        <i class="fa-solid fa-star precio"></i>
+                        <i class="fa-solid fa-star precio"></i>
+                    </div>
                 </div>
                 <button type="submit" value="Crear cuenta" class="btn_registro">Ver más</button>
+                
             </div>
 
             <div class="info-contenedor ">
                 <div class="contenedor_produ">
-                    <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
+                    <img class="imagen_produ" src="img/tapas_verdes.jpg" alt="">
                 </div>
-                <h4 class="letra-negra font-title p10">
-                    Tapas rojas x 10kg
-                </h4>
-                <div class="letra-negra p10">
-                    <!-- <i class="fa-regular fa-mask precio"></i> -->
-                    <h4 class="letra-negra font-title">$20000,00</h4>
-                </div>
-                <div class="letra-negra flex font-title">
-                    <p class="p12L">Stock :</p>
-                    <p class="stock">Disponible</p>
-                </div>
-                <div class="icon-absolute-abajo flex ">
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                </div>
-                <button type="submit" value="Crear cuenta" class="btn_registro">Ver más</button>
-            </div>
-
-            <div class="info-contenedor ">
-                <div class="contenedor_produ">
-                    <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
-                </div>
-                <h4 class="letra-negra font-title p10">
-                    Tapas rojas x 10kg
-                </h4>
-                <div class="letra-negra p10">
-                    <!-- <i class="fa-regular fa-mask precio"></i> -->
-                    <h4 class="letra-negra font-title">$20000,00</h4>
-                </div>
-                <div class="letra-negra flex font-title">
-                    <p class="p12L">Stock :</p>
-                    <p class="stock">Disponible</p>
-                </div>
-                <div class="icon-absolute-abajo flex ">
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
+                <div class="contenedor_info">
+                    <h4 class="letra-negra font-title p10">
+                        Tapas rojas x 10kg
+                    </h4>
+                    <div class="letra-negra p10">
+                        <!-- <i class="fa-regular fa-mask precio"></i> -->
+                        <h4 class="letra-negra font-title">$20000,00</h4>
+                    </div>
+                    <div class="letra-negra flex font-title">
+                        <p class="p12L">Stock :</p>
+                        <p class="stock">Disponible</p>
+                    </div>
+                    <div class="icon-absolute-abajo flex ">
+                        <i class="fa-solid fa-star precio"></i>
+                        <i class="fa-solid fa-star precio"></i>
+                        <i class="fa-solid fa-star precio"></i>
+                        <i class="fa-solid fa-star precio"></i>
+                        <i class="fa-solid fa-star precio"></i>
+                    </div>
                 </div>
                 <button type="submit" value="Crear cuenta" class="btn_registro">Ver más</button>
+                
             </div>
-
-            <div class="info-contenedor ">
-                <div class="contenedor_produ">
-                    <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
-                </div>
-                <h4 class="letra-negra font-title p10">
-                    Tapas rojas x 10kg
-                </h4>
-                <div class="letra-negra p10">
-                    <!-- <i class="fa-regular fa-mask precio"></i> -->
-                    <h4 class="letra-negra font-title">$20000,00</h4>
-                </div>
-                <div class="letra-negra flex font-title">
-                    <p class="p12L">Stock :</p>
-                    <p class="stock">Disponible</p>
-                </div>
-                <div class="icon-absolute-abajo flex ">
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                </div>
-                <button type="submit" value="Crear cuenta" class="btn_registro">Ver más</button>
-            </div>
-
-            <div class="info-contenedor ">
-                <div class="contenedor_produ">
-                    <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
-                </div>
-                <h4 class="letra-negra font-title p10">
-                    Tapas rojas x 10kg
-                </h4>
-                <div class="letra-negra p10">
-                    <!-- <i class="fa-regular fa-mask precio"></i> -->
-                    <h4 class="letra-negra font-title">$20000,00</h4>
-                </div>
-                <div class="letra-negra flex font-title">
-                    <p class="p12L">Stock :</p>
-                    <p class="stock">Disponible</p>
-                </div>
-                <div class="icon-absolute-abajo flex ">
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                </div>
-                <button type="submit" value="Crear cuenta" class="btn_registro">Ver más</button>
-            </div>
-
-            <div class="info-contenedor ">
-                <div class="contenedor_produ">
-                    <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
-                </div>
-                <h4 class="letra-negra font-title p10">
-                    Tapas rojas x 10kg
-                </h4>
-                <div class="letra-negra p10">
-                    <!-- <i class="fa-regular fa-mask precio"></i> -->
-                    <h4 class="letra-negra font-title">$20000,00</h4>
-                </div>
-                <div class="letra-negra flex font-title">
-                    <p class="p12L">Stock :</p>
-                    <p class="stock">Disponible</p>
-                </div>
-                <div class="icon-absolute-abajo flex ">
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                    <i class="fa-solid fa-star precio"></i>
-                </div>
-                <button type="submit" value="Crear cuenta" class="btn_registro">Ver más</button>
-            </div>
-
+           
           
         </section>
         

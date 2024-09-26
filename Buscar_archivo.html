@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="verEmpleado.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="hiden">
+        <div class="logo">
+            <a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
+        </div>
+        <div class="icono">
+            <input class="buscador" type="search" placeholder="Buscar producto">
+            <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+        </div>
+        <nav>
+            <label id="menuIcon" onclick="mostrarMenu()">
+                <span class="fa-solid fa-bars precio"></span>
+            </label>
+
+            <ul id="menucito">
+                <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a></li>
+                <li><i class="fa-solid fa-shop"></i><a href="./listadoProductosView.html">Productos</a></li>
+                <li><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html">Iniciar sesión</a></li>
+                <li><i class="fa-solid fa-user-plus"></i><a href="./registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hiden main-buscar-archivo" style="overflow-y:scroll;">
+        <div class="titulo_productos">
+            <div class="content-title">Buscar informes y graficos</div>
+            <div class="flex">
+                <div class="filtros">
+                    <div class="filtros-container">
+                        <p class="p12R">Filtros</p>
+                        <p class="p12L">Eliminar filtros</p>
+                    </div>
+                    <div class="icono">
+                        <input class="buscador" type="search" placeholder="Buscar informe o grafico">
+                        <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+                    </div>
+                </div>
+                <div class="contenedor_filtro">
+                    <form action="" method="GET" class="flex">
+
+                        <div class="form-informes">
+                            <label class="m10r"><b>Del Dia:</b></label>
+                            <input class="input-date" type="date" name="from_date" class="form-control">
+                        </div>
+
+
+                        <div class="form-informes">
+                            <label class="m10r"><b> Hasta el Dia: </b></label>
+                            <input class="input-date" type="date" name="to_date" class="form-control">
+                        </div>
+
+
+                        <div class="form-informes">
+                            <select class="select_opc">
+                                <option value="" disabled selected hidden>Mostrar todas las categorias</option>
+                                <option class="opc_RolyState" value='1'>Grafcos</option>
+                                <option class="opc_RolyState" value='2'>Informes</option>
+                            </select>
+                        </div>
+                        <div class="form-informes">
+                            <label><b></b></label> <br>
+                            <button type="submit" class="btn_registro letra-blanca">Aplicar filtros</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="main-verInformes">
+            <section class="table-body">
+                <table class="tabla-empleado">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tema</th>
+                        <th>Tipo de informe</th>
+                        <th>Fecha de creación</th>
+                        <th class="fondo_negro">Opciones</th>
+                    </tr>
+                    <tr>
+                        <td>{{NOMBRE_ARCHIVO}}</td>
+                        <td>{{TEMA}}</td>
+                        <td>{{TIPO_INFORME}}</td>
+                        <td>{{FECHA_CREADA}}</td>
+                        <td>
+                            <div class="flex">
+                                <a class="letra-blanca celeste" href="?slug=modificarEmpleado&id={{ID_EMPLEADOS}}"><i class="fa-solid fa-plus p12R"></i>Mas detalles</a>
+                                <a class="letra-blanca naranja" href="?slug=modificarEmpleado&id={{ID_EMPLEADOS}}"><i class="fa-solid fa-pen-to-square p12R"></i>Editar</a>
+                                <a class="letra-blanca verde" href="?slug=modificarEmpleado&id={{ID_EMPLEADOS}}"><i class="fa-regular fa-file-arrow-down p12R"></i>Descargar</a>
+                            </div>
+                        </td>
+
+                    </tr>
+                </table>
+            </section>
+        </div>
+
+
+
+    </main>
+
+    <footer  class="hiden">
+        <div class="info">
+            <h5 class="letra-blanca">Compañia</h5>
+            <div class="flex contactos">
+                <p class="font-17">Sobre nosotros</p>
+                <p class="font-17">Nuestros servicios</p>
+                <p class="font-17">Politica de privacidad</p>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Seguinos en las Redes</h5>
+            <div class="flex redes">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Contactanos</h5>
+            <div class="flex contactos">
+                <p class="font-17"><span class="fa-regular fa-envelope"></span> Contacto.innovplast@gmail.com</p>
+                <p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
+            </div>
+        </div>
+        <div class="derechos_autores">
+            <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+
+    </footer>
+    <div class="show_derechos hiden">
+        <div class="derechos_autores">
+            <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/acciones.js"></script>
+</body>
+
+</html>

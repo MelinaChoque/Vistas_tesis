@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <style>
+        #canvas_container {
+            width: 800px;
+            height: 450px;
+            overflow: auto;
+        }
+
+        #pdf_renderer {
+            border: 1px solid #000; /* Borde del canvas para visibilidad */
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css"> <!-- Asegúrate de que esta ruta sea correcta -->
+</head>
+
+<body>
+    <header>
+        <h1>PDF Viewer</h1>
+    </header>
+
+    <main>
+        <div id="my_pdf_viewer">
+            <div id="canvas_container">
+                <canvas id="pdf_renderer" style="overflow: scroll;"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ACME - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Cargar PDF.js correctamente -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+<script>
+    const url = 'my_document.pdf'; // Cambia esto a la ruta de tu PDF
+
+    const pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+
+    let pdfDoc = null,
+        pageNum = 1,
+        scale = 5,
+        canvas = document.getElementById('pdf_renderer'),
+        ctx = canvas.getContext('2d');
+
+    pdfjsLib.getDocument(url).promise.then(pdf => {
+        pdfDoc = pdf;
+        renderPage(pageNum);
+    });
+
+    function renderPage(num) {
+        pdfDoc.getPage(num).then(page => {
+            const viewport = page.getViewport({ scale });
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            const renderContext = {
+                canvasContext: ctx,
+                viewport: viewport
+            };
+
+            page.render(renderContext);
+        });
+    }
+</script>
+
+</body>
+
+</html>
