@@ -48,7 +48,38 @@
 
     <main class="hiden main-informes">
         <div class="titulo_productos">
-            <div class="content-title">Buscar informes y graficos</div>
+            <div class="content-title">Buscar informes</div>
+            <div class="flex">
+                <div class="filtros">
+                    <div class="filtros-container">
+                        <p class="p12R">Filtros</p>
+                        <p class="p12L">Eliminar filtros</p>
+                    </div>
+                    <div class="icono">
+                        <input class="buscador" type="search" placeholder="Buscar informe o grafico">
+                        <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+                    </div>
+                </div>
+                <div class="contenedor_filtro">
+                    <form action="" method="GET" class="flex">
+
+                        <div class="form-informes">
+                            <label class="m10r"><b>Del Dia:</b></label>
+                            <input class="input-date" type="date" name="from_date" class="form-control">
+                        </div>
+
+
+                        <div class="form-informes">
+                            <label class="m10r"><b> Hasta el Dia: </b></label>
+                            <input class="input-date" type="date" name="to_date" class="form-control">
+                        </div>
+                        <div class="form-informes">
+                            <label><b></b></label> <br>
+                            <button type="submit" class="btn_registro letra-blanca">Aplicar filtros</button>
+                        </div>
+                    </form>
+
+                </div>
             
         </div>
         <section class="container_productos">
@@ -56,16 +87,6 @@
                 <canvas id="pdf_renderer"></canvas>
                 <div class="titulo_productos">Titulo del pdf</div>
             </div>
-            
-
-            <div class="info-contenedor ">
-                <canvas id="pdf_renderer"></canvas>
-            </div>
-
-            <div class="info-contenedor ">
-                <canvas id="pdf_renderer"></canvas>
-            </div>
-
         </section>
 
     </main>
