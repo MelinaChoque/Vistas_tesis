@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header class="hiden">
+        <div class="flex cajita-header">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
+            </div>
+            <div class="icono">
+                <input class="buscador" type="search" placeholder="Buscar producto">
+                <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+            </div>
+            <nav>
+                <label id="menuIcon" onclick="mostrarMenu()">
+                    <span class="fa-solid fa-bars precio"></span>
+                </label>
+    
+                <ul id="menucito">
+                    <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a></li>
+                    <li><i class="fa-solid fa-shop"></i><a href="./listadoProductosView.html">Productos</a></li>
+                    <li><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html">Iniciar sesión</a></li>
+                    <li><i class="fa-solid fa-user-plus"></i><a href="./registro.html">Registrarse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hiden compras_cliente" style="overflow-y:scroll;">
+        <span class="titulo_productos">Mis compras</span>
+        <div class="flex-start">
+            <div class="icono">
+                <input class="buscador" type="search" placeholder="Buscar producto">
+                <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+            </div>
+            <div class="filtros ml-2">
+                <i class="fa-light fa-filter-list"></i>
+                <select class="filtro_compra ml-2 letra-blanca txt-center me-2">
+                    <option value="" disabled selected hidden>Ordenar</option>
+                    <option class="opc_RolyState font-12" value='1'>Todas</option>
+                    <option class="opc_RolyState font-12" value='2'>Este mes</option>
+                    <option class="opc_RolyState font-12" value='3'>Mes pasado</option>
+                    <option class="opc_RolyState font-12" value='4'>Este año</option>
+                </select>
+            </div>
+            <span class="font-9 filtros p12L ">{{CANT_COMPRAS}}</span>
+         
+        </div>
+  
+            <a href="" class="container_productos">
+                <div class="flex-start letra-blanca">{{FECHA_PEDIDO}}</div>
+                <div class="info-contenedor">
+                    <div class="contenedor_detalles">
+                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
+                    </div>
+                    <div class="contenedor-cart">
+                        <span class="letra-negra">{{NOMBRE_PRODUCTO}}</span>
+                        <div class="font-9 letra-negra m12t">{{CANT_UNIDADES}}</div>
+                    </div>
+                    <div class="columna">
+                        <span class="letra-negra">Este producto fue vendido por:</span>
+                       <span class="letra-negra">{{NOMBRE_VENDEDOR}}</span>
+                    </div>
+                    <div class="columna">
+                        <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Agregar al
+                            carrito</button>
+                        <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Comprar
+                            ahora</button>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="container_productos">
+                <div class="flex-start letra-blanca">{{FECHA_PEDIDO}}</div>
+                <div class="info-contenedor">
+                    <div class="contenedor_detalles">
+                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
+                    </div>
+                    <div class="contenedor-cart">
+                        <span class="letra-negra">{{NOMBRE_PRODUCTO}}</span>
+                        <div class="font-9 letra-negra m12t">{{CANT_UNIDADES}}</div>
+                    </div>
+                    <div class="columna">
+                        <span class="letra-negra">Este producto fue vendido por:</span>
+                       <span class="letra-negra">{{NOMBRE_VENDEDOR}}</span>
+                    </div>
+                    <div class="columna">
+                        <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Agregar al
+                            carrito</button>
+                        <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Comprar
+                            ahora</button>
+                    </div>
+                </div>
+            </a>
+  
+    </main>
+
+    <footer class="hide_mobile">
+        <div class="info">
+            <h5 class="letra-blanca">Compañia</h5>
+            <div class="flex contactos">
+                <p class="font-17">Sobre nosotros</p>
+                <p class="font-17">Nuestros servicios</p>
+                <p class="font-17">Politica de privacidad</p>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Seguinos en las Redes</h5>
+            <div class="flex redes">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Contactanos</h5>
+            <div class="flex contactos">
+                <p class="font-17"><span class="fa-regular fa-envelope"></span> Contacto.innovplast@gmail.com</p>
+                <p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
+            </div>
+        </div>
+        <div class="derechos_autores">
+            <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+
+    </footer>
+    <div class="show_derechos hiden">
+        <div class="derechos_autores">
+            <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+    </div>    
+    <script src="js/acciones.js"></script>
+</body>
+
+</html>

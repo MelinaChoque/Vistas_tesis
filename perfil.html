@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            right: 50px;
+            top: 7%;
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hiden">
+        <div class="flex cajita-header">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
+            </div>
+            <div class="icono">
+                <input class="buscador" type="search" placeholder="Buscar producto">
+                <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+            </div>
+            <nav>
+                <label id="menuIcon" onclick="mostrarMenu()">
+                    <span class="fa-solid fa-bars precio"></span>
+                </label>
+
+                <ul id="menucito">
+                    <li><a href=""><i class="fa-light fa-house m10r"></i>Inicio</a></li>
+                    <li><a href=""><i class="fa-thin fa-shop m10r"></i>Productos</a></li>
+                    <li class="m10r"><a href="#" id="popupPerfil"><i class="fa-light fa-user m10r"></i>Mi perfil</a><i class="fa-thin fa-caret-down"></i></li>
+
+                    <li><i class="fa-thin fa-bell p12R"></i></li>
+                    <li><i class="fa-light fa-cart-shopping p12R"></i></li>
+                    
+                </ul>
+                <div id="popupModal" class="modal">
+                    <div class="modal-content">
+                        <p class="letra-negra">{{NOMBRE_USUARIO}}</p>
+                        <p class="letra-negra p12L">Mi perfil</p>
+                        <p class="letra-negra">Compras</p>
+                        <p class="letra-negra">Historial</p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="perfil_usuario" style="overflow-y:scroll;">
+        <div class="titulo_produtos">
+            <h4>Mi perfil </h4>
+        </div>
+        <div class="contenedor-general-perfil">
+            <div class="contenedor-der-perfil ">
+                <div class="contenedor_detalles p12T">
+                    <img class="round-image" src="img/tapas_rojas.jpg" alt="">
+                </div>
+                <div class="columna ">
+                    <p class="m12t font-subtitle letra-negra p12T ">{{NOMBRE_USUARIO}} </p>
+                    <p class="m12t font-subtitle letra-negra">{{APODO_USUARIO}} </p>
+                    <p class="m12t font-subtitle letra-negra">{{EMAIL_USUARIO}} </p>
+                    <p class="m12t font-subtitle letra-negra">{{TELEFONO_USUARIO}} </p>
+                </div>
+                <div class="columna">
+                    <a href="" class="btn_registro letra-blanca m12t">Editar perfil</a>
+                </div>
+            </div>
+            <div class="contenedor-izq-perfil">
+                <a href="" class="info_extra_usuario">
+                    <div class="iconos_usuario">
+                        <i class="fa-regular fa-credit-card p12R"></i>
+                    </div>
+                    <div class="contenedor_info_extra_usuario">
+                        <p class="title m12t p12L">Tarjeta</p>
+                        <p class="font-subtitle m12t p12L">Tarjetas que registraste en tu cuenta.</p>
+                    </div>
+                    <div class="icono_modificar">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </a>
+                <a href="" class="info_extra_usuario">
+                    <div class="iconos_usuario">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contenedor_info_extra_usuario">
+                        <p class="title m12t p12L">Direcciones</p>
+                        <p class="font-subtitle m12t p12L">Direcciones que registraste en tu cuenta.</p>
+                    </div>
+                    <div class="icono_modificar">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </a>
+                <a href="" class="info_extra_usuario">
+                    <div class="iconos_usuario">
+                        <i class="fa-regular fa-repeat"></i>
+                    </div>
+                    <div class="contenedor_info_extra_usuario">
+                        <p class="title m12t p12L">Cambiar contraseña</p>
+                        <p class="font-subtitle m12t p12L">¿Desea cambiar su contraseña?</p>
+                    </div>
+                    <div class="icono_modificar">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </a>
+                <a href="" class="info_extra_usuario">
+                    <div class="iconos_usuario">
+                        <i class="fa-solid fa-user-slash"></i>
+                    </div>
+                    <div class="contenedor_info_extra_usuario">
+                        <p class="title m12t p12L">Eliminar cuenta</p>
+                        <p class="font-subtitle m12t p12L">Eliminar su cuenta permanentemente.</p>
+                    </div>
+                    <div class="icono_modificar">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="hide_mobile">
+        <div class="info izquierda">
+            <h5 class="letra-blanca">Compañia</h5>
+            <hr>
+            <div class="d-flex-col">
+               <span class="m12t">Sobre nosotros </span> 
+              <span> Nuestros servicios </span>
+               <span> Politica de privacidad</span>
+            </div>
+        </div>
+        <div class="info izquierda">
+            <h5 class="letra-blanca">Seguinos en las Redes</h5>
+            <hr>
+            <div class="d-flex-fila">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+        <div class="info izquierda">
+            <h5 class="letra-blanca">Contactanos</h5>
+            <hr>
+            <div class="d-flex-col">
+                <span ><i class="fa-regular fa-envelope me-2"></i> Contacto.innovplast@gmail.com</span>
+                <span  ><i class="fa-brands fa-whatsapp me-2"></i>+54 11 7018-8136</span>
+            </div>
+        </div>
+
+        <div class="derechos_autores">
+            <p><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+        <div class="info izquierda">
+            <h5 class="letra-blanca">Atención al cliente</h5>
+            <hr>
+            <div class="d-flex-col">
+                <span class="m20t" >Botón de arrepentimiento</span>
+                <span class="m20t">Defensa al consumidor</span>
+            </div>
+        </div>
+
+        <div class="derechos_autores">
+            <p><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <!-- <footer class="hide_mobile">
+        <div class="info">
+            <h5 class="letra-blanca">Compañia</h5>
+            <div class="flex contactos">
+                <p >Sobre nosotros</p>
+                <p >Nuestros servicios</p>
+                <p >Politica de privacidad</p>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Seguinos en las Redes</h5>
+            <div class="flex redes">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Contactanos</h5>
+            <div class="flex contactos">
+                <p ><span class="fa-regular fa-envelope"></span> Contacto.innovplast@gmail.com</p>
+                <p ><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
+            </div>
+        </div>
+        <div class="derechos_autores">
+            <p><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+
+    </footer> -->
+    <div class="show_derechos hiden">
+        <div class="derechos_autores">
+            <p><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/acciones.js"></script>
+    <script src="js/popupPerfil.js"></script>
+</body>
+
+</html>

@@ -27,9 +27,10 @@
                 <label id="menuIcon" onclick="mostrarMenu()">
                     <span class="fa-solid fa-bars precio"></span>
                 </label>
-    
+
                 <ul id="menucito">
-                    <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a></li>
+                    <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a>
+                    </li>
                     <li><i class="fa-solid fa-shop"></i><a href="./listadoProductosView.html">Productos</a></li>
                     <li><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html">Iniciar sesión</a></li>
                     <li><i class="fa-solid fa-user-plus"></i><a href="./registro.html">Registrarse</a></li>
@@ -38,49 +39,400 @@
         </div>
     </header>
 
-    <main class="hiden" style="overflow-y:scroll;">
-        
-    </main>
+    <main class="main-detalles-productos hiden" style="overflow-y:scroll;">
+        <div class="d-flex-col">
+            <section class="container_productos">
+                <div class="info-contenedor">
+                    <div class="contenedor-cart">
+                        <div class="title letra-negra">Tapas rojas X 10kg</div>
+                        <div class="title letra-negra"></div>
+                    </div>
+                    <div class="contenedor_detalles">
+                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
+                    </div>
+                    <div class="container_desc_producto letra-negra">
 
+                        <div class="title-desc-producto letra-negra">Tapas rojas X 10kg</div>
+                        <p class="letra-negra flex">Califica este producto:</p>
+                        <div class="icon-absolute-abajo flex ">
+                            <i class="fa-solid fa-star precio"></i>
+                            <i class="fa-solid fa-star precio"></i>
+                            <i class="fa-solid fa-star precio"></i>
+                            <i class="fa-solid fa-star precio"></i>
+                            <i class="fa-solid fa-star precio"></i>
+                        </div>
+                        <div class="precio font-title">$20000 </div>
+                        <div class="font-17 letra-negra p12t">Stock disponible: <span
+                                class="letra-violeta">{{STOCK_PRODUCTO}}</span> </div>
+
+                        <div class="columna">
+                            <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Agregar al
+                                carrito</button>
+                            <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Comprar
+                                ahora</button>
+                        </div>
+                        <p class="letra-negra">Vendido por <span class="letra-violeta txt_mayus">
+                                {{NOMBRE_VENDEDOR}}</span> </p>
+                        <p class="letra-negra m12t"><i class="fa-sharp fa-solid fa-plus icon-chico"></i><span
+                                class="letra-violeta txt_mayus"> {{CANT_VENTAS}}</span> Ventas </p>
+                        <p class="letra-violeta "><i class="fa-solid fa-location-dot m12t p12R letra-gris"></i>Nuestra
+                            tienda</p>
+                    </div>
+                </div>
+                <section class="container_vendedor columna">
+                    <span class="font-17 columna letra-negra m12t">Productos relacionados</span>
+                    <i id="prev" class="fa-regular fa-chevron-left letra-negra"></i>
+                    <div id="slider">
+                        <a href="">
+                            <div class="container_productos_comprador">
+                                <div class="columna">
+                                    <div class="contenedor_detalles">
+                                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
+                                    </div>
+
+                                    <p class="letra-negra p12T">{{NOMBRE_PRODUCTO}}</p>
+                                    <div class="precio font-subtitle letra-negra">${{PRECIO_PRODUCTO}} </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="container_productos_comprador">
+                                <div class="columna">
+                                    <div class="contenedor_detalles">
+                                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
+                                    </div>
+
+                                    <p class="letra-negra p12T">{{NOMBRE_PRODUCTO}}</p>
+                                    <div class="precio font-subtitle letra-negra">${{PRECIO_PRODUCTO}} </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="container_productos_comprador">
+                                <div class="columna">
+                                    <div class="contenedor_detalles">
+                                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
+                                    </div>
+
+                                    <p class="letra-negra p12T">{{NOMBRE_PRODUCTO}}</p>
+                                    <div class="precio font-subtitle letra-negra">${{PRECIO_PRODUCTO}} </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="container_productos_comprador">
+                                <div class="columna">
+                                    <div class="contenedor_detalles">
+                                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
+                                    </div>
+                                    <p class="letra-negra p12T">{{NOMBRE_PRODUCTO}}</p>
+                                    <div class="precio font-subtitle letra-negra">${{PRECIO_PRODUCTO}} </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="container_productos_comprador">
+                                <div class="columna">
+                                    <div class="contenedor_detalles">
+                                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
+                                    </div>
+
+                                    <p class="letra-negra p12T">{{NOMBRE_PRODUCTO}}</p>
+                                    <div class="precio font-subtitle letra-negra">${{PRECIO_PRODUCTO}} </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="container_productos_comprador">
+                                <div class="columna">
+                                    <div class="contenedor_detalles">
+                                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
+                                    </div>
+
+                                    <p class="letra-negra p12T">{{NOMBRE_PRODUCTO}}</p>
+                                    <div class="precio font-subtitle letra-negra">${{PRECIO_PRODUCTO}} </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <i id="next" class="fa-duotone fa-solid fa-chevron-right letra-negra"></i>
+                </section>
+
+
+                <div class="container_desc_producto letra-negra">
+                    <p>Vendido por <span class="title txt_mayus">{{NOMBRE_VENDEDOR}}</span> </p>
+                    <p class="letra-negra m12t">+ de {{NUMERO_VENTAS}} concretadas</p>
+                    <div class="columna">
+                        <a href="" class="btn_registro letra-blanca">Ir a la página del vendedor</a>
+                    </div>
+                </div>
+            </section>
+            <section class="columna">
+                <div class="detalles-producto">
+                    <h5 class="title-desc-producto  ">Detalles </h5>
+                    <p class="p12T">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum accusantium enim
+                        voluptatem, voluptates, deleniti recusandae quae ut expedita quaerat facere beatae ullam
+                        excepturi saepe possimus esse quibusdam incidunt impedit assumenda.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos nulla, debitis voluptas molestiae
+                        eum culpa animi fugit eveniet molestias nobis tempore, maxime adipisci sequi minus aspernatur
+                        ullam iusto dolore suscipit?
+                    </p>
+                </div>
+            </section>
+            <div id="contenedor_opinion">
+                <div class="contenedor_opinion">
+                    <div class="calificacion_producto">
+                        <p class="font-17">Opiniones del producto</p>
+                        <div class="flex">
+                            <p class="titulo_importante letra-violeta">4.7</p>
+                            <div class="columna">
+                                <div class="icon-absolute-abajo flex ">
+                                    <i class="fa-solid fa-star precio"></i>
+                                    <i class="fa-solid fa-star precio"></i>
+                                    <i class="fa-solid fa-star precio"></i>
+                                    <i class="fa-solid fa-star precio"></i>
+                                    <i class="fa-solid fa-star precio"></i>
+                                </div>
+                                <p class="font-9">{{CANT_CALIFICACIONES}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="opinion_usuario">
+                        <p class="font-17">Opiniones</p>
+                        <div class="flex">
+                            <select class="select_opc">
+                                <option value="" disabled selected hidden>Ordenar</option>
+                                <option class="opc_RolyState font-12" value='1'>Más recientes</option>
+                                <option class="opc_RolyState font-12" value='2'>Más antiguos</option>
+                            </select>
+                            <select class="select_opc">
+                                <option value="" disabled selected hidden>Calificacion</option>
+                                <option class="opc_RolyState font-12" value='1'>1</option>
+                                <option class="opc_RolyState font-12" value='2'>2</option>
+                                <option class="opc_RolyState font-12" value='3'>3</option>
+                                <option class="opc_RolyState font-12" value='4'>4</option>
+                                <option class="opc_RolyState font-12" value='5'>5</option>
+                            </select>
+                        </div>
+                        <p class="font-9">{{CANT_OPINIONES}}</p>
+                        <div class="comentario m12t">
+                            <div class="icon-absolute-abajo fila ">
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                            </div>
+                            <p class="font-comentario m12t">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Doloribus repellat nemo molestias dolores architecto reiciendis voluptas vel aut
+                                accusantium beatae. Eum facere consequuntur asperiores quia in explicabo odio veniam
+                                aliquid.</p>
+                        </div>
+                        <div class="comentario m12t">
+                            <div class="icon-absolute-abajo fila ">
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                            </div>
+                            <p class="font-comentario m12t">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Doloribus repellat nemo molestias dolores architecto reiciendis voluptas vel aut
+                                accusantium beatae. Eum facere consequuntur asperiores quia in explicabo odio veniam
+                                aliquid.</p>
+                        </div>
+                        <div class="comentario m12t">
+                            <div class="icon-absolute-abajo fila ">
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                            </div>
+                            <p class="font-comentario m12t">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Doloribus repellat nemo molestias dolores architecto reiciendis voluptas vel aut
+                                accusantium beatae. Eum facere consequuntur asperiores quia in explicabo odio veniam
+                                aliquid.</p>
+                        </div>
+                        <div class="comentario m12t">
+                            <div class="icon-absolute-abajo fila ">
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                                <i class="fa-solid fa-star precio"></i>
+                            </div>
+                            <p class="font-comentario m12t">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Doloribus repellat nemo molestias dolores architecto reiciendis voluptas vel aut
+                                accusantium beatae. Eum facere consequuntur asperiores quia in explicabo odio veniam
+                                aliquid.</p>
+                        </div>
+                        <p id="popupComentario" href="" class="letra-blanca">Ver más comentarios</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="popupModal" class="modal">
+                <div class="modal-content columna">
+                    <span class="flex close"><i class="fa-regular fa-xmark close"></i> </span>
+                    
+                    <div id="contenedor_opinion_popup">
+                        <div class="contenedor_opinion">
+                            <div class="calificacion_producto">
+                                <p class="font-17">Opiniones del producto</p>
+                                <div class="flex">
+                                    <p class="titulo_importante letra-violeta">4.7</p>
+                                    <div class="columna">
+                                        <div class="icon-absolute-abajo flex ">
+                                            <i class="fa-solid fa-star precio"></i>
+                                            <i class="fa-solid fa-star precio"></i>
+                                            <i class="fa-solid fa-star precio"></i>
+                                            <i class="fa-solid fa-star precio"></i>
+                                            <i class="fa-solid fa-star precio"></i>
+                                        </div>
+                                        <p class="font-9">{{CANT_CALIFICACIONES}}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="opinion_usuario">
+                                <p class="font-17">Opiniones</p>
+                                <div class="flex">
+                                    <select class="select_opc">
+                                        <option value="" disabled selected hidden>Ordenar</option>
+                                        <option class="opc_RolyState font-12" value='1'>Más recientes</option>
+                                        <option class="opc_RolyState font-12" value='2'>Más antiguos</option>
+                                    </select>
+                                    <select class="select_opc">
+                                        <option value="" disabled selected hidden>Calificacion</option>
+                                        <option class="opc_RolyState font-12" value='1'>1</option>
+                                        <option class="opc_RolyState font-12" value='2'>2</option>
+                                        <option class="opc_RolyState font-12" value='3'>3</option>
+                                        <option class="opc_RolyState font-12" value='4'>4</option>
+                                        <option class="opc_RolyState font-12" value='5'>5</option>
+                                    </select>
+                                </div>
+                                <p class="font-9">{{CANT_OPINIONES}}</p>
+                                <div class="comentario m12t">
+                                    <div class="icon-absolute-abajo fila ">
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                    </div>
+                                    <p class="font-comentario m12t">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                        elit. Doloribus repellat nemo molestias dolores architecto reiciendis voluptas
+                                        vel aut accusantium beatae. Eum facere consequuntur asperiores quia in explicabo
+                                        odio veniam aliquid.</p>
+                                </div>
+                                <div class="comentario m12t">
+                                    <div class="icon-absolute-abajo fila ">
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                    </div>
+                                    <p class="font-comentario m12t">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                        elit. Doloribus repellat nemo molestias dolores architecto reiciendis voluptas
+                                        vel aut accusantium beatae. Eum facere consequuntur asperiores quia in explicabo
+                                        odio veniam aliquid.</p>
+                                </div>
+                                <div class="comentario m12t">
+                                    <div class="icon-absolute-abajo fila ">
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                    </div>
+                                    <p class="font-comentario m12t">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                        elit. Doloribus repellat nemo molestias dolores architecto reiciendis voluptas
+                                        vel aut accusantium beatae. Eum facere consequuntur asperiores quia in explicabo
+                                        odio veniam aliquid.</p>
+                                </div>
+                                <div class="comentario m12t">
+                                    <div class="icon-absolute-abajo fila ">
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                        <i class="fa-solid fa-star precio"></i>
+                                    </div>
+                                    <p class="font-comentario m12t">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                        elit. Doloribus repellat nemo molestias dolores architecto reiciendis voluptas
+                                        vel aut accusantium beatae. Eum facere consequuntur asperiores quia in explicabo
+                                        odio veniam aliquid.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
     <footer class="hide_mobile">
-        <div class="info">
+        <div class="info izquierda">
             <h5 class="letra-blanca">Compañia</h5>
-            <div class="flex contactos">
-                <p class="font-17">Sobre nosotros</p>
-                <p class="font-17">Nuestros servicios</p>
-                <p class="font-17">Politica de privacidad</p>
+            <hr>
+            <div class="d-flex-col">
+               <span class="m12t">Sobre nosotros </span> 
+              <span> Nuestros servicios </span>
+               <span> Politica de privacidad</span>
             </div>
         </div>
-        <div class="info">
+        <div class="info izquierda">
             <h5 class="letra-blanca">Seguinos en las Redes</h5>
-            <div class="flex redes">
+            <hr>
+            <div class="d-flex-fila">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-tiktok"></i>
             </div>
         </div>
-        <div class="info">
+        <div class="info izquierda">
             <h5 class="letra-blanca">Contactanos</h5>
-            <div class="flex contactos">
-                <p class="font-17"><span class="fa-regular fa-envelope"></span> Contacto.innovplast@gmail.com</p>
-                <p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
+            <hr>
+            <div class="d-flex-col">
+                <span ><i class="fa-regular fa-envelope me-2"></i> Contacto.innovplast@gmail.com</span>
+                <span  ><i class="fa-brands fa-whatsapp me-2"></i>+54 11 7018-8136</span>
             </div>
         </div>
+
         <div class="derechos_autores">
-            <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+            <p><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+        <div class="info izquierda">
+            <h5 class="letra-blanca">Atención al cliente</h5>
+            <hr>
+            <div class="d-flex-col">
+                <span class="m20t" >Botón de arrepentimiento</span>
+                <span class="m20t">Defensa al consumidor</span>
+            </div>
         </div>
 
+        <div class="derechos_autores">
+            <p><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
     </footer>
     <div class="show_derechos hiden">
         <div class="derechos_autores">
             <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
         </div>
     </div>
-
-
-
-    
     <script src="js/acciones.js"></script>
+    <script src="js/sliderProductos.js"></script>
+    <script src="js/popupComentario.js"></script>
 </body>
 
 </html>

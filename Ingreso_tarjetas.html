@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/material-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -51,31 +49,29 @@
                 </div>
                 <div class="container_tarjetas">
 
-                    <form class="form-tarjetas" id="form-tarjetas" action="" >
+                    <form class="form-tarjetas" id="form-tarjetas" action="">
                         <div class="fila">
                             <h5 class="txt">Número de tarjeta</h5>
-                            <input class="input_trasparente" id="inputNumero" type="text" maxlength="19" >
+                            <input class="input_trasparente" id="inputNumero" type="text" maxlength="19">
 
                         </div>
                         <div class="fila">
                             <h5 class="txt">Nombre y apellido</h5>
-                            <input class="input_trasparente nombre"  id="inputNombre"  type="text">
- 
+                            <input class="input_trasparente nombre" id="inputNombre" type="text">
+
                         </div>
 
                         <div class="flex">
                             <div class="contenedor_2">
                                 <div class="fila">Fecha de vencimiento</div>
-                                <div class="columna">
-                                    <input class="input_trasparente" type="text" id="inputVencimiento" placeholder="Mes / Año">
+                                    <input class="input_trasparente" type="text" id="inputVencimiento"
+                                        placeholder="Mes / Año">
                                     <span class="error_tarjeta">Fecha no valida</span>
-                                </div>
-
                             </div>
                             <div class="contenedor_2">
                                 <div class="fila">Código de seguridad</div>
                                 <input class="input_trasparente" type="text" id="inputSeguridad" placeholder="CVV">
-                            
+
                             </div>
                         </div>
                         <div class="columna">
@@ -102,10 +98,11 @@
                                             <p class="label">Nombre Tarjeta</p>
                                             <p class="nombre">Jhon Doe</p>
                                         </div>
-                
+
                                         <div class="grupo" id="expiracion">
                                             <p class="label">Expiracion</p>
-                                            <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                                            <p class="expiracion"><span class="mes">MM</span> / <span
+                                                    class="year">AA</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -122,11 +119,11 @@
 
                             </div>
 
-                
+
                         </section>
                     </div>
                 </div>
-                
+
 
             </section>
             <div class="factura">
@@ -168,33 +165,48 @@
     </main>
 
     <footer class="hide_mobile">
-        <div class="info">
+        <div class="info izquierda">
             <h5 class="letra-blanca">Compañia</h5>
-            <div class="flex contactos">
-                <p class="font-17">Sobre nosotros</p>
-                <p class="font-17">Nuestros servicios</p>
-                <p class="font-17">Politica de privacidad</p>
+            <hr>
+            <div class="d-flex-col">
+               <span class="m12t">Sobre nosotros </span> 
+              <span> Nuestros servicios </span>
+               <span> Politica de privacidad</span>
             </div>
         </div>
-        <div class="info">
+        <div class="info izquierda">
             <h5 class="letra-blanca">Seguinos en las Redes</h5>
-            <div class="flex redes">
+            <hr>
+            <div class="d-flex-fila">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-tiktok"></i>
             </div>
         </div>
-        <div class="info">
+        <div class="info izquierda">
             <h5 class="letra-blanca">Contactanos</h5>
-            <div class="flex contactos">
-                <p class="font-17"><span class="fa-regular fa-envelope"></span> Contacto.innovplast@gmail.com</p>
-                <p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
+            <hr>
+            <div class="d-flex-col">
+                <span ><i class="fa-regular fa-envelope me-2"></i> Contacto.innovplast@gmail.com</span>
+                <span  ><i class="fa-brands fa-whatsapp me-2"></i>+54 11 7018-8136</span>
             </div>
         </div>
+
         <div class="derechos_autores">
-            <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+            <p><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+        <div class="info izquierda">
+            <h5 class="letra-blanca">Atención al cliente</h5>
+            <hr>
+            <div class="d-flex-col">
+                <span class="m20t" >Botón de arrepentimiento</span>
+                <span class="m20t">Defensa al consumidor</span>
+            </div>
         </div>
 
+        <div class="derechos_autores">
+            <p><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
     </footer>
     <div class="show_derechos hiden">
         <div class="derechos_autores">
@@ -204,8 +216,9 @@
 
 
 
-    <script src="js/tarjeta.js"></script>
+    
     <script src="js/acciones.js"></script>
+    <script src="js/tarjeta.js"></script>
 </body>
 
 </html>

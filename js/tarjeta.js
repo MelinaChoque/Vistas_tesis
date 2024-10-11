@@ -4,9 +4,9 @@ nombreTarjeta = document.querySelector('#tarjeta .nombre');
 cvvTarjeta = document.querySelector('#tarjeta .cvv');
 vencimientoTarjeta = document.querySelector('#tarjeta .expiracion');
 formulario = document.querySelector('#form-tarjetas');
-
-
-
+const errorMessage = document.querySelector(".contenedor_2 .error_tarjeta");
+const inputError = document.getElementById("inputVencimiento");
+    
 const mostrarFrente = () => {
     if (tarjeta.classList.contains('active')) {
         tarjeta.classList.remove('active');
@@ -43,10 +43,14 @@ document.getElementById("inputVencimiento").addEventListener("input", function(e
         const currentMonth = today.getMonth() + 1; 
         const currentYear = today.getFullYear() % 100;
 
-        if(anio <= currentYear && mes <= currentMonth ){
-            console.log("Ya vencio la tarjeta");
-        }else{
-            console.log("tarjeta en vigencia")
+        if(anio <= currentYear && mes <= currentMonth || mes>13 || mes <=0){
+            errorMessage.style.display = "block"; 
+            inputError.style.border = "1px solid red";
+            console.log("tarjeta vencida")
+
+        }else{ errorMessage.style.display = "none"; 
+            console.log("tarjeta en vigencia");
+            inputError.style.border = "";
         }
 
 
@@ -54,7 +58,7 @@ document.getElementById("inputVencimiento").addEventListener("input", function(e
     //Tamaño permitido 5 caracteres incluye la barra (/) //
     e.target.value = value.slice(0, 5);
 
-    vencimientoTarjeta.textContent =value ;
+    vencimientoTarjeta.textContent =e.target.value ;
     
 
 });
