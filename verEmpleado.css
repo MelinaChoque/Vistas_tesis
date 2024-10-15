@@ -96,20 +96,7 @@
                 border: none;
             }
 
-            .fondo_negro{
-                background-color: var(--gris-oscuro);
-            }
 
-            .naranja{
-                background-color: var(--naranja);
-                width: 100%;
-            }
-            .verde{
-                background-color: var(--verde-claro);
-            }
-            .celeste{
-                background-color: var(--celeste);
-            }
         }
         .flex{
             display: flex;

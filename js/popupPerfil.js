@@ -1,6 +1,6 @@
 const popupPerfil = document.getElementById("popupPerfil");
-const popupModal = document.getElementById("popupModal");
-const modalContent = document.querySelector(".modal-content"); 
+const popupModal = document.getElementById("popupModalPerfil");
+const modalContent = document.querySelector(".modal-content-perfil"); 
 
 
 popupPerfil.addEventListener("click", () => {

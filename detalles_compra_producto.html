@@ -43,8 +43,8 @@
             <div class="contenedor-cart p12L">
                 <span class="letra-negra">{{NOMBRE_PRODUCTO}}</span>
                 <div class="flex">
-                    <div class="font-9 letra-negra m12t">{{CANT_UNIDADES}}</div>
-                    <a href="">Ver detalles</a>
+                    <div class="font-9 letra-negra m12t border-der">{{CANT_UNIDADES}} u.</div>
+                    <a href="" class="ml-2 p10T">Ver detalles</a>
                 </div>
 
             </div>
@@ -59,8 +59,8 @@
             </div>
             <span class="font-20 m12t">¿Que te parecio este producto?</span>
             <span class="font-17 m12t">{{NOMBRE_PRODUCTO}}</span>
-            
-            <div class="columna-center">
+
+            <div class="columna-center m12t">
                 <div class="flex">
                     <i class="fa-solid fa-star precio "></i>
                     <i class="fa-solid fa-star precio "></i>
@@ -72,12 +72,25 @@
                     <span>Bueno</span>
                     <span>Malo</span>
                 </div>
+
             </div>
-           
+
 
         </section>
-        <section class="contenedor_estado">
-            <span></span>
+
+        <section class="contenedor_informacion_compra">
+            <div class="informacion_compra">
+                <span class="font-20 border-bottom ">Informacion de la compra</span>
+                <div class="flex">
+                    <i class="fa-sharp-duotone fa-solid fa-note titulo_subimportante font-25 m12t ml-2 m10r"></i>
+                    <div class="columna p12L">
+                        <span class="txt-center m12t" title="{{NOMBRE_PRODUCTO}} ">{{NOMBRE_PRODUCTO}}</span>
+                        <span class="font-9 m12t">Cargada el {{FECHA_PEDIDO}}</span>
+                        <a href="" class="m12t letra-violeta">Descargar factura</a>
+                    </div>
+
+                </div>
+            </div>
         </section>
     </main>
 
@@ -120,6 +133,7 @@
 
 
     <script src="js/acciones.js"></script>
+    <script src="js/confirmacionDescarga.js"></script>
 </body>
 
 </html>

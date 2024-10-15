@@ -36,29 +36,18 @@
         </div>
     </header>
 
-    <main class="hiden compras_cliente" style="overflow-y:scroll;">
-        <span class="titulo_productos">Mis compras</span>
-        <div class="flex-start">
-            <div class="icono m10r ml-2">
-                <input class="buscador" type="search" placeholder="Buscar producto">
-                <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+    <main class="hiden main_opiniones_usuario" style="overflow-y:scroll;">
+        <span class="titulo_productos font-25">Opiniones</span>
+        <div class="flex-start border-bottom ">
+            <div>
+                <a href="" class="active_opinion letra-blanca p12L font-20 ">Pendientes</a>
+                <a href="" class="letra-blanca p12L ml-8 font-20 ">Realizadas</a>
             </div>
-            <div class="filtros ml-2">
-                <i class="fa-light fa-filter-list"></i>
-                <select class="filtro_compra ml-2 letra-blanca txt-center m10r">
-                    <option value="" disabled selected hidden>Ordenar</option>
-                    <option class="opc_RolyState font-12" value='1'>Todas</option>
-                    <option class="opc_RolyState font-12" value='2'>Este mes</option>
-                    <option class="opc_RolyState font-12" value='3'>Mes pasado</option>
-                    <option class="opc_RolyState font-12" value='4'>Este año</option>
-                </select>
-            </div>
-            <span class="font-9 filtros p12L ">{{CANT_COMPRAS}}</span>
-         
+            <span>1 - {{OPINIONES_PENDIENTES}} opiniones pendientes</span>
         </div>
-  
-            <a href="" class="container_productos">
-                <div class="flex-start letra-blanca">{{FECHA_PEDIDO}}</div>
+        <div class="mt-2">
+            <a href="" class="container_productos m12t">
+                <span class="letra-blanca flex-start">Opina y ayuda a más personas</span>
                 <div class="info-contenedor">
                     <div class="contenedor_detalles">
                         <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
@@ -67,41 +56,27 @@
                         <span class="letra-negra">{{NOMBRE_PRODUCTO}}</span>
                         <div class="font-9 letra-negra m12t">{{CANT_UNIDADES}}</div>
                     </div>
-                    <div class="columna">
-                        <span class="letra-negra">Este producto fue vendido por:</span>
-                       <span class="letra-negra">{{NOMBRE_VENDEDOR}}</span>
+
+                    <div class="columna-center m12t">
+                        <div class="flex">
+                            <i class="fa-solid fa-star precio "></i>
+                            <i class="fa-solid fa-star precio "></i>
+                            <i class="fa-solid fa-star precio "></i>
+                            <i class="fa-solid fa-star precio "></i>
+                            <i class="fa-solid fa-star precio "></i>
+                        </div>
+                        <div class="flex pimba">
+                            <span>Bueno</span>
+                            <span>Malo</span>
+                        </div>
                     </div>
                     <div class="columna">
-                        <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Agregar al
-                            carrito</button>
-                        <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Comprar
-                            ahora</button>
+                        <span>Comprado el {{FECHA_COMPRA}}</span>
                     </div>
                 </div>
             </a>
-            <a href="" class="container_productos">
-                <div class="flex-start letra-blanca">{{FECHA_PEDIDO}}</div>
-                <div class="info-contenedor">
-                    <div class="contenedor_detalles">
-                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
-                    </div>
-                    <div class="contenedor-cart">
-                        <span class="letra-negra">{{NOMBRE_PRODUCTO}}</span>
-                        <div class="font-9 letra-negra m12t">{{CANT_UNIDADES}}</div>
-                    </div>
-                    <div class="columna">
-                        <span class="letra-negra">Este producto fue vendido por:</span>
-                       <span class="letra-negra">{{NOMBRE_VENDEDOR}}</span>
-                    </div>
-                    <div class="columna">
-                        <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Agregar al
-                            carrito</button>
-                        <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Comprar
-                            ahora</button>
-                    </div>
-                </div>
-            </a>
-  
+        </div>
+
     </main>
 
     <footer class="hide_mobile">

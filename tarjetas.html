@@ -27,9 +27,10 @@
                 <label id="menuIcon" onclick="mostrarMenu()">
                     <span class="fa-solid fa-bars precio"></span>
                 </label>
-    
+
                 <ul id="menucito">
-                    <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a></li>
+                    <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a>
+                    </li>
                     <li><i class="fa-solid fa-shop"></i><a href="./listadoProductosView.html">Productos</a></li>
                     <li><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html">Iniciar sesión</a></li>
                     <li><i class="fa-solid fa-user-plus"></i><a href="./registro.html">Registrarse</a></li>
@@ -39,47 +40,78 @@
     </header>
 
     <main class="ver_tarjeta_usuario" style="overflow-y:scroll;">
-        <div class="titulo_produtos">
+        <div class="titulo_produtos m12t">
             <h4>Mis tarjetas </h4>
         </div>
-        <div class="contenedor-general-perfil">
-            <div class="contenedor-tarjeta-perfil  ">
-                <a href="" class="info_tarjeta_usuario">
-                    <div class="contenedor_detalles">
-                        <img class="round-image" src="img/tapas_rojas.jpg" alt="">
-                    </div>
-                    <div class="contenedor_info_extra_usuario">
-                        <p class="title m12t p12L">Tarjeta</p>
-                        <p class="font-subtitle m12t p12L">Tarjetas que registraste en tu cuenta.</p>
-                    </div>
-                    <div class="icono_modificar">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
-                </a>
-                <a href="" class="info_tarjeta_usuario">
-                    <div class="contenedor_detalles">
-                        <img class="round-image" src="img/tapas_rojas.jpg" alt="">
-                    </div>
-                    <div class="contenedor_info_extra_usuario">
-                        <p class="title m12t p12L">Tarjeta</p>
-                        <p class="font-subtitle m12t p12L">Tarjetas que registraste en tu cuenta.</p>
-                    </div>
-                    <div class="icono_modificar">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
-                </a>
-                                <a href="" class="info_tarjeta_usuario">
-                    <div class="contenedor_detalles">
-                        <img class="round-image" src="img/tapas_rojas.jpg" alt="">
-                    </div>
-                    <div class="contenedor_info_extra_usuario">
-                        <p class="title m12t p12L">Tarjeta</p>
-                        <p class="font-subtitle m12t p12L">Tarjetas que registraste en tu cuenta.</p>
-                    </div>
-                    <div class="icono_modificar">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
-                </a>
+        <div class="contenedor-general-perfil m12t">
+            <div class="contenedor-tarjeta-perfil border-bottom ">
+                <div class="contenedor_detalles ml-2 m10r">
+                    <img class="round-image" src="img/tarjeta/logos/america_Express.png" alt="">
+                </div>
+                <div class="contenedor_info_extra_usuario ml-2 m10r">
+                    <span>Terminada en {{ULTIMOS_NUMEROS}}</span>
+                    <span>{{TIPO_TARJETA}}</span>
+                    <span class="font-9">Vencimiento: {{FECHA_VENCIMIENTO}}</span>
+                </div>
+                <div class="eliminar_tarjeta">
+                    <div class="letra-violeta">Eliminar</div>
+                </div>
+            </div>
+
+            <div class="contenedor-tarjeta-perfil border-bottom ">
+                <div class="contenedor_detalles ml-2 m10r">
+                    <img class="round-image" src="img/tarjeta/logos/america_Express.png" alt="">
+                </div>
+                <div class="contenedor_info_extra_usuario ml-2 m10r">
+                    <span>Terminada en {{ULTIMOS_NUMEROS}}</span>
+                    <span>{{TIPO_TARJETA}}</span>
+                    <span class="font-9">Vencimiento: {{FECHA_VENCIMIENTO}}</span>
+                </div>
+                <div class="eliminar_tarjeta">
+                    <div class="letra-violeta">Eliminar</div>
+                </div>
+            </div>
+
+            <div class="contenedor-tarjeta-perfil border-bottom ">
+                <div class="contenedor_detalles ml-2 m10r">
+                    <img class="round-image" src="img/tarjeta/logos/america_Express.png" alt="">
+                </div>
+                <div class="contenedor_info_extra_usuario ml-2 m10r">
+                    <span>Terminada en {{ULTIMOS_NUMEROS}}</span>
+                    <span>{{TIPO_TARJETA}}</span>
+                    <span class="font-9">Vencimiento: {{FECHA_VENCIMIENTO}}</span>
+                </div>
+                <div class="eliminar_tarjeta">
+                    <div class="letra-violeta">Eliminar</div>
+                </div>
+            </div>
+
+            <div class="contenedor-tarjeta-perfil border-bottom ">
+                <div class="contenedor_detalles ml-2 m10r">
+                    <img class="round-image" src="img/tarjeta/logos/america_Express.png" alt="">
+                </div>
+                <div class="contenedor_info_extra_usuario ml-2 m10r">
+                    <span>Terminada en {{ULTIMOS_NUMEROS}}</span>
+                    <span>{{TIPO_TARJETA}}</span>
+                    <span class="font-9">Vencimiento: {{FECHA_VENCIMIENTO}}</span>
+                </div>
+                <div class="eliminar_tarjeta">
+                    <div class="letra-violeta">Eliminar</div>
+                </div>
+            </div>
+
+            <div class="contenedor-tarjeta-perfil border-bottom ">
+                <div class="contenedor_detalles ml-2 m10r">
+                    <img class="round-image" src="img/tarjeta/logos/america_Express.png" alt="">
+                </div>
+                <div class="contenedor_info_extra_usuario ml-2 m10r">
+                    <span>Terminada en {{ULTIMOS_NUMEROS}}</span>
+                    <span>{{TIPO_TARJETA}}</span>
+                    <span class="font-9">Vencimiento: {{FECHA_VENCIMIENTO}}</span>
+                </div>
+                <div class="eliminar_tarjeta">
+                    <div class="letra-violeta">Eliminar</div>
+                </div>
             </div>
         </div>
     </main>
@@ -121,7 +153,7 @@
 
 
 
-    
+
     <script src="js/acciones.js"></script>
 </body>
 
