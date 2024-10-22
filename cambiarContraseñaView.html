@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/material-icons.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+	<link rel="stylesheet" href="estilos.css">
+
+	<script src="js/acciones.js"></script>
+	<title>Modificar</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+                <a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
+        </div>
+            <div class="icono">
+                <input class="buscador" type="search" placeholder="Buscar producto">
+                <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+            </div>
+        <nav>   
+                <ul id="menucito">
+                    <li><a href="./listadoProductosView.html"></i>Productos</a></li>
+                    <li><a href="./login.html"></i>Panel</a></li>   
+                    <li><a href="./login.html"></i>Estadisticas</a></li>  
+                    <li><i class="fa-solid fa-user"></i><a href="./login.html"></i>Admin</a></li> 
+                    <li><i class="fa-light fa-cart-shopping"></i></li>
+                </ul>
+
+            <label id="menuIcon" onclick="mostrarMenu()">
+                <span class="material-icons-outlined">menu</span>
+            </label>
+        </nav>
+    </header>
+	<main class="main-empleado">
+		<h4>Cambiar contraseña</h4>
+		<form class="agrandar" action="" method="POST">
+            
+			<div class="Cammpo_registro">
+				<h5 class="alineacion_izq">Ingrese contraseña nueva</h5>
+                <i class="fa-light fa-eye eye-icon " id="togglePassword"> </i>
+				<input class="input_trasparente" type='password' name='password2'  placeholder='Ingrese su nueva contraseña' id="id_password">
+			</div>
+
+			<div class="Cammpo_registro">
+				<h5 class="alineacion_izq">Ingrese contraseña actual</h5>
+                <i class="fa-light fa-eye eye-icon " id="togglePassword2"> </i>
+				<input class="input_trasparente" type='password' name='password1'  placeholder='Ingrese su contraseña actual' id="id_password2">
+			</div>
+			<div class="Cammpo_btn">
+				<input class="btn_registro letra-blanca" type="submit" name="btn_modificar" value="Cambiar contraseña"><br>
+            </div>
+		</form>
+	</main>
+
+    <footer class="hide_mobile ">
+        <div class="info">
+            <h5 class="letra-blanca">Compañia</h5>
+            <div class="flex contactos">
+                <p class="font-17">Sobre nosotros</p>
+                <p class="font-17">Nuestros servicios</p>
+                <p class="font-17">Politica de privacidad</p>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Seguinos en las Redes</h5>
+            <div class="flex redes">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Contactanos</h5>
+            <div class="flex contactos">
+                <p class="font-17"><span class="fa-regular fa-envelope"></span> Contacto.innovplast@gmail.com</p>
+                <p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
+            </div>
+        </div>
+
+    </footer>
+    <div class="show_derechos">
+        <div class="derechos_autores">
+            <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+    </div>
+    <script src="js/ojito.js"></script>
+    <script src="js/ojito2.js"></script>
+</body>
+
+</html>

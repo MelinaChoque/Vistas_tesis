@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Panel admin</title>
+</head>
+<body>
+    <header class="hiden">
+        <div class="logo">  
+            <a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
+        </div>
+        <div class="icono">
+            <input class="buscador" type="search" placeholder="Buscar producto">
+            <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+        </div>
+        <nav>
+            <label id="menuIcon" onclick="mostrarMenu()">
+                <span class="fa-solid fa-bars precio"></span>
+            </label>
+
+            <ul id="menucito">
+                <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a></li>
+                <li><i class="fa-solid fa-shop"></i><a href="./listadoProductosView.html">Productos</a></li>
+				<li><a href="./login.html"></i>Panel</a></li>
+				<li><a href="./login.html"></i>Estadisticas</a></li>
+				<li><i class="fa-solid fa-user"></i><a href="./login.html"></i>Admin</a></li>
+				<li><i class="fa-light fa-cart-shopping"></i></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-panel-Admin">
+        <div class="titulo_productos">
+            <div class="info_esta">
+                <i class="fa-solid fa-file"></i>
+                Buscar facturas
+            </div>
+            <div class="info_esta">
+                <i class="fa-solid fa-chart-line"></i>
+                Ver informes
+            </div>
+            <div class="info_esta">
+                <i class="fa-light fa-chart-user"></i>
+                Mis ventas
+            </div>
+        </div>
+        <div class="panel_admin">
+            <div class="content_panel">
+                <div class="titulo_productos">
+                    Tus ganancias
+                </div>
+                <!-- <div id="chart-container" class="chart-container">
+                    <canvas id="donutChart"></canvas>
+                </div> -->
+            </div>
+            <div class="content_panel">
+                <div class="titulo_productos">
+                    Gráfico en tiempo real
+                </div>
+                <div id="chart-container" class="chart-container">
+                    <canvas id="donutChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="hide_mobile">
+        <div class="info">
+            <h5 class="letra-blanca">Compañia</h5>
+            <div class="flex contactos">
+                <p class="font-17">Sobre nosotros</p>
+                <p class="font-17">Nuestros servicios</p>
+                <p class="font-17">Politica de privacidad</p>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Seguinos en las Redes</h5>
+            <div class="flex redes">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Contactanos</h5>
+            <div class="flex contactos">
+                <p class="font-17"><span class="fa-regular fa-envelope"></span> Contacto.innovplast@gmail.com</p>
+                <p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
+            </div>
+        </div>
+    </footer>
+    <div class="show_derechos hiden">
+        <div class="derechos_autores">
+            <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+    </div>    
+    <script src="./js/grafico.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/acciones.js"></script>
+</body>
+</html>

@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/material-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -38,71 +36,50 @@
         </div>
     </header>
 
-    <main  class="main-carrito">
-        <div class="flex">
-            <section class="container_productos">
+    <main class="main_opiniones_usuario">
+        <span class="titulo_productos font-25">Opiniones</span>
+        <div class="flex-start border-bottom mt-2">
+            <div>
+                <a href="" class="active_opinion letra-blanca p12L font-20 ">Pendientes</a>
+                <a href="" class="letra-blanca p12L font-20 ">Realizadas</a>
+            </div>
+            <span class="font-9">1 - {{OPINIONES_PENDIENTES}}</span>
+        </div>
+        <div class="mt-2">
+            <a href="" class="container_productos m12t">
+                <span class="letra-blanca flex-start">Opina y ayuda a más personas</span>
                 <div class="info-contenedor">
                     <div class="contenedor_detalles">
                         <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
                     </div>
-                    <div class="flex-compu">
-                        <div class="contenedor-cart">
-                            <div class="title letra-negra">Tapas rojas X 10kg</div>
-                            <div class="title letra-negra"></div>
-                        </div>
-                        <div class="btn_cart">
-                            <button id="restar" class="iconos botonesCarrito"><i class="fa-solid fa-minus" id="hover"></i></button>
-                            <p id="cantidad" class="botonesCarrito letra-negra">1</p>
-                            <button  id="sumar"  class="iconos botonesCarrito"><i class="fa-solid fa-plus" id="hover" ></i></button>
-                        </div>
-                        <div class="btn_cart columna-compu">
-                            <button><i class="fa-solid fa-trash p10"></i></button>
-                        </div>
-
+                    <div class="contenedor-cart">
+                        <span class="letra-negra">{{NOMBRE_PRODUCTO}}</span>
+                        <div class="font-9 letra-negra m12t">{{CANT_UNIDADES}}</div>
                     </div>
 
-                </div>
-    
-                
-            </section>
-            <div class="factura">
-                <div class="container-factura">
-                    <div class="content-title">Resumen de compra</div>
-                    <div class="panel_admin">
-                        <div class="content_panel">
-                            Productos(4)
+                    <div class="columna-center m12t bloquear_contenedor">
+                        <div class="flex">
+                            <i class="fa-solid fa-star precio "></i>
+                            <i class="fa-solid fa-star precio "></i>
+                            <i class="fa-solid fa-star precio "></i>
+                            <i class="fa-solid fa-star precio "></i>
+                            <i class="fa-solid fa-star precio "></i>
                         </div>
-                        <div class="content_panel">
-                            $14.000,00
+                        <div class="flex pimba">
+                            <span>Bueno</span>
+                            <span>Malo</span>
                         </div>
                     </div>
-
-                    <div class="panel_admin">
-                        <div class="content_panel">
-                            Impuesto 
-                        </div>
-                        <div class="content_panel">
-                            $200,00
-                        </div>
-                    </div>
-
-                    <div class="panel_admin">
-                        <div class="content_panel">
-                            Subtotal 
-                        </div>
-                        <div class="content_panel">
-                            $14.200,00
-                        </div>
-                    </div>
-                    <div class="flex m12t">
-                        <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Ver más</button>
+                    <div class="columna bloquear_contenedor">
+                        <span>Comprado el {{FECHA_COMPRA}}</span>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
+
     </main>
 
-      <footer class="hide_mobile ">
+    <footer class="hide_mobile">
         <div class="info">
             <h5 class="letra-blanca">Compañia</h5>
             <div class="flex contactos">
@@ -126,17 +103,12 @@
                 <p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
             </div>
         </div>
-
     </footer>
-    <div class="show_derechos">
+    <div class="show_derechos hiden">
         <div class="derechos_autores">
             <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
         </div>
-    </div>
-
-
-
-    
+    </div>    
     <script src="js/acciones.js"></script>
 </body>
 

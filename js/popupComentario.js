@@ -15,12 +15,13 @@ popupComentario.addEventListener("click", () => {
 });
 
 window.addEventListener("click", (event) => {
-    if (!modalContent.contains(event.target) && !event.target.closest('#popupComentario') ) {
+    if (!modalContent.contains(event.target) && !popupComentario.contains(event.target)) {
         popupModal.style.display = "none";
-    }else{
-        closeBtn.addEventListener("click", () => {
-            popupModal.style.display = "none";
-        });
     }
 });
+
+closeBtn.addEventListener("click", () => {
+    popupModal.style.display = "none";
+});
+
 

@@ -27,9 +27,10 @@
                 <label id="menuIcon" onclick="mostrarMenu()">
                     <span class="fa-solid fa-bars precio"></span>
                 </label>
-    
+
                 <ul id="menucito">
-                    <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a></li>
+                    <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a>
+                    </li>
                     <li><i class="fa-solid fa-shop"></i><a href="./listadoProductosView.html">Productos</a></li>
                     <li><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html">Iniciar sesión</a></li>
                     <li><i class="fa-solid fa-user-plus"></i><a href="./registro.html">Registrarse</a></li>
@@ -38,71 +39,30 @@
         </div>
     </header>
 
-    <main  class="main-carrito">
-        <div class="flex">
-            <section class="container_productos">
-                <div class="info-contenedor">
-                    <div class="contenedor_detalles">
-                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
-                    </div>
-                    <div class="flex-compu">
-                        <div class="contenedor-cart">
-                            <div class="title letra-negra">Tapas rojas X 10kg</div>
-                            <div class="title letra-negra"></div>
-                        </div>
-                        <div class="btn_cart">
-                            <button id="restar" class="iconos botonesCarrito"><i class="fa-solid fa-minus" id="hover"></i></button>
-                            <p id="cantidad" class="botonesCarrito letra-negra">1</p>
-                            <button  id="sumar"  class="iconos botonesCarrito"><i class="fa-solid fa-plus" id="hover" ></i></button>
-                        </div>
-                        <div class="btn_cart columna-compu">
-                            <button><i class="fa-solid fa-trash p10"></i></button>
-                        </div>
-
-                    </div>
-
+    <main class="ver_direcciones_usuario">
+        <div class="titulo_produtos m12t m12b">
+            <h4>Mis direcciones </h4>
+        </div>
+        <div class="contenedor-general-direcciones m12t">
+            <div class="contenedor-direcciones-perfil border-bottom letra-negra ">
+                <div class="font-20 contenedor-icon m12t">
+                    <i class="fa-light fa-house-chimney-blank "></i>
                 </div>
-    
-                
-            </section>
-            <div class="factura">
-                <div class="container-factura">
-                    <div class="content-title">Resumen de compra</div>
-                    <div class="panel_admin">
-                        <div class="content_panel">
-                            Productos(4)
-                        </div>
-                        <div class="content_panel">
-                            $14.000,00
-                        </div>
+                <div class="contenedor-direccion-info p12L">	
+                    <span class="font-20">{{DIRECCION_USUARIO}}</span>
+                    <div class="flex-end p12T"> 
+                        <span class="font-9 p12T">{{NOMBRE_USUARIO}}</span>
+                        <span class="font-9 p12T">{{TELEFONO_USUARIO}}</span>
                     </div>
-
-                    <div class="panel_admin">
-                        <div class="content_panel">
-                            Impuesto 
-                        </div>
-                        <div class="content_panel">
-                            $200,00
-                        </div>
-                    </div>
-
-                    <div class="panel_admin">
-                        <div class="content_panel">
-                            Subtotal 
-                        </div>
-                        <div class="content_panel">
-                            $14.200,00
-                        </div>
-                    </div>
-                    <div class="flex m12t">
-                        <button type="submit" value="Crear cuenta" class="btn_registro letra-blanca">Ver más</button>
-                    </div>
+  
                 </div>
             </div>
+        
+            
         </div>
     </main>
 
-      <footer class="hide_mobile ">
+    <footer class="hide_mobile ">
         <div class="info">
             <h5 class="letra-blanca">Compañia</h5>
             <div class="flex contactos">
@@ -136,7 +96,7 @@
 
 
 
-    
+
     <script src="js/acciones.js"></script>
 </body>
 

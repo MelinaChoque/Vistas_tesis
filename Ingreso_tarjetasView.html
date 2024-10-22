@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/material-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -27,9 +25,10 @@
                 <label id="menuIcon" onclick="mostrarMenu()">
                     <span class="fa-solid fa-bars precio"></span>
                 </label>
-    
+
                 <ul id="menucito">
-                    <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a></li>
+                    <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a>
+                    </li>
                     <li><i class="fa-solid fa-shop"></i><a href="./listadoProductosView.html">Productos</a></li>
                     <li><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html">Iniciar sesión</a></li>
                     <li><i class="fa-solid fa-user-plus"></i><a href="./registro.html">Registrarse</a></li>
@@ -38,34 +37,89 @@
         </div>
     </header>
 
-    <main  class="main-carrito">
-        <div class="flex">
+
+    <main class="main-tarjetas">
+        <div class="flex-center">
             <section class="container_productos">
-                <div class="info-contenedor">
-                    <div class="contenedor_detalles">
-                        <img class="imagen_produ" src="img/tapas_rojas.jpg" alt="">
-                    </div>
-                    <div class="flex-compu">
-                        <div class="contenedor-cart">
-                            <div class="title letra-negra">Tapas rojas X 10kg</div>
-                            <div class="title letra-negra"></div>
-                        </div>
-                        <div class="btn_cart">
-                            <button id="restar" class="iconos botonesCarrito"><i class="fa-solid fa-minus" id="hover"></i></button>
-                            <p id="cantidad" class="botonesCarrito letra-negra">1</p>
-                            <button  id="sumar"  class="iconos botonesCarrito"><i class="fa-solid fa-plus" id="hover" ></i></button>
-                        </div>
-                        <div class="btn_cart columna-compu">
-                            <button><i class="fa-solid fa-trash p10"></i></button>
-                        </div>
-
-                    </div>
-
+                <div class="titulo_productos">
+                    <h5><i class="fa-regular fa-credit-card p12R"></i>Agregar tarjeta de crédito</h5>
                 </div>
-    
-                
+                <div class="container_tarjetas">
+
+                    <form class="form-tarjetas" id="form-tarjetas" action="">
+                        <div class="fila">
+                            <h5 class="txt">Número de tarjeta</h5>
+                            <input class="input_trasparente" id="inputNumero" type="text" maxlength="19">
+
+                        </div>
+                        <div class="fila">
+                            <h5 class="txt">Nombre y apellido</h5>
+                            <input class="input_trasparente nombre" id="inputNombre" type="text">
+
+                        </div>
+
+                        <div class="flex">
+                            <div class="contenedor_2">
+                                <div class="fila font-12">Fecha vencimiento</div>
+                                <input class="input_trasparente" type="text" id="inputVencimiento"
+                                    placeholder="Mes / Año">
+                                <span class="error_tarjeta">Fecha no valida</span>
+                            </div>
+                            <div class="contenedor_2">
+                                <div class="fila font-12">Cod de seguridad</div>
+                                <input class="input_trasparente" type="text" id="inputSeguridad" placeholder="CVV">
+
+                            </div>
+                        </div>
+                        <div class="columna">
+                            <div class="fila">DNI del titular de la tarjeta</div>
+                            <input class="input_trasparente" type="text" id="inputDni">
+
+                        </div>
+                    </form>
+
+                    <div class="form-tarjetas2">
+                        <section class="tarjeta active" id="tarjeta">
+                            <div class="delantera">
+                                <div class="logo-marca" id="logo-marca">
+
+                                </div>
+
+                                <div class="datos">
+                                    <div class="grupo" id="numero">
+                                        <p class="label">Número Tarjeta</p>
+                                        <p class="numero">#### #### #### ####</p>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="grupo" id="nombre">
+                                            <p class="label">Nombre Tarjeta</p>
+                                            <p class="nombre">Jhon Doe</p>
+                                        </div>
+
+                                        <div class="grupo" id="expiracion">
+                                            <p class="label">Expiracion</p>
+                                            <p class="expiracion"><span class="mes">MM</span> / <span
+                                                    class="year">AA</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trasera ">
+                                <div class="barra-magnetica"></div>
+                                <div class="datos">
+
+                                    <div class="grupo" id="cvv">
+                                        <p class="label">CVV</p>
+                                        <p class="cvv"></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </section>
-            <div class="factura">
+            <div class="resumen">
                 <div class="container-factura">
                     <div class="content-title">Resumen de compra</div>
                     <div class="panel_admin">
@@ -100,9 +154,10 @@
                 </div>
             </div>
         </div>
+
     </main>
 
-      <footer class="hide_mobile ">
+    <footer class="hide_mobile">
         <div class="info">
             <h5 class="letra-blanca">Compañia</h5>
             <div class="flex contactos">
@@ -126,18 +181,14 @@
                 <p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
             </div>
         </div>
-
     </footer>
-    <div class="show_derechos">
+    <div class="show_derechos hiden">
         <div class="derechos_autores">
             <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
         </div>
     </div>
-
-
-
-    
     <script src="js/acciones.js"></script>
+    <script src="js/tarjeta.js"></script>
 </body>
 
 </html>

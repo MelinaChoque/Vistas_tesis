@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header class="hiden">
+        <div class="flex cajita-header">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/Sin_fondo_logo.png" alt=""></a>
+            </div>
+            <div class="icono">
+                <input class="buscador" type="search" placeholder="Buscar producto">
+                <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+            </div>
+            <nav>
+                <label id="menuIcon" onclick="mostrarMenu()">
+                    <span class="fa-solid fa-bars precio"></span>
+                </label>
+
+                <ul id="menucito">
+                    <li><i class="fa-solid fa-house me-0"></i><a href="./listadoProductosView.html"><b>Inicio</b></a>
+                    </li>
+                    <li><i class="fa-solid fa-shop"></i><a href="./listadoProductosView.html">Productos</a></li>
+                    <li><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html">Iniciar sesión</a></li>
+                    <li><i class="fa-solid fa-user-plus"></i><a href="./registro.html">Registrarse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="compras_cliente">
+        <span class="font-25 flex m12b">Comprobantes</span>
+        <div class="flex-justify">
+
+            <div class="icono m10r ml-2">
+                <input class="buscador" type="search" placeholder="Buscar">
+                <input type="submit" class="material-icons-outlined btn_lupa" value="search">
+            </div>
+            <div class="flex m12t">
+                <div class="filtros ml-2">
+                    <i class="fa-thin fa-calendar-days"></i>
+                    <select class="filtro_compra ml-2 letra-blanca txt-center m10r">
+                        <option value="" disabled selected hidden>Ordenar</option>
+                        <option class="opc_RolyState font-12" value='1'>Todas</option>
+                        <option class="opc_RolyState font-12" value='2'>Este mes</option>
+                        <option class="opc_RolyState font-12" value='3'>Mes pasado</option>
+                        <option class="opc_RolyState font-12" value='4'>Este año</option>
+                    </select>
+
+                </div>
+                <!-- <div class="filtros ml-2">
+                        <i class="fas fa-sliders-h"></i>
+                        <select class="filtro_compra ml-2 letra-blanca txt-center m10r">
+                            <option value="" disabled selected hidden>Filtrar y ordenar</option>
+                            <option class="opc_RolyState font-12" value='1'>Titulo (a-z)</option>
+                            <option class="opc_RolyState font-12" value='2'>Titulo (z-a)</option>
+                            <option class="opc_RolyState font-12" value='3'>Menor precio</option>
+                            <option class="opc_RolyState font-12" value='4'>Mayor precio</option>
+                            <option class="opc_RolyState font-12" value='1'>Mayor cantidad</option>
+                            <option class="opc_RolyState font-12" value='2'>Menor cantidad</option>
+                        </select>
+                
+                    </div> -->
+                <!-- <span class="font-9 filtros btn ml-8">Limpiar filtros</span> -->
+
+                <div class="font-9">
+                    {{CANT_VENTAS}} ventas
+                </div>
+            </div>
+        </div>
+        <section class="container_productos m12t">
+            <div class="card">
+                <div class="card-header">Factura N° {{NÚMERO DE FACTURA}}</div>
+                <div class="card-body">
+                    <h4 class="card-title font-17 letra-negra" title="{{NOMBRE_CLIENTE}}">Cliente:
+                        {{NOMBRE_CLIENTE}}</h4>
+
+                    <p class="card-text fw-bold letra-negra m12t">Productos</p>
+                    <li class="letra-negra p12L m12t">{{PRODUCTO_1}}</li>
+                    <li class="letra-negra p12L m12t">{{PRODUCTO_2}}</li>
+                    <p class="letra-negra font-9 m12t">{{FECHA_COMPRA}}</p>
+                    <div class="flex-end ">
+                        <a href="" class=" letra-negra font-12 m12t">Ver más</a>
+                    </div>
+
+
+                </div>
+                <div class="card-footer p10">
+                    <button class="btn btn-primary" title="Imprimir comprobante"><span class="fa fa-print"></span>
+                    </button>
+                    <button class="btn btn-primary" title="Compartir comprobante"><span
+                            class="fa fa-share-nodes"></span></button>
+                    <button class="btn btn-primary" title="Descargar comprobante"><span
+                            class="fa fa-download"></span></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Factura N° {{NÚMERO DE FACTURA}}</div>
+                <div class="card-body">
+                    <h4 class="card-title font-17 letra-negra" title="{{NOMBRE_CLIENTE}}">Cliente:
+                        {{NOMBRE_CLIENTE}}</h4>
+
+                    <p class="card-text fw-bold letra-negra m12t">Productos</p>
+                    <li class="letra-negra p12L m12t">{{PRODUCTO_1}}</li>
+                    <li class="letra-negra p12L m12t">{{PRODUCTO_2}}</li>
+                    <p class="letra-negra font-9 m12t">{{FECHA_COMPRA}}</p>
+                    <div class="flex-end ">
+                        <a href="" class=" letra-negra font-12 m12t">Ver más</a>
+                    </div>
+
+
+                </div>
+                <div class="card-footer p10">
+                    <button class="btn btn-primary" title="Imprimir comprobante"><span class="fa fa-print"></span>
+                    </button>
+                    <button class="btn btn-primary" title="Compartir comprobante"><span
+                            class="fa fa-share-nodes"></span></button>
+                    <button class="btn btn-primary" title="Descargar comprobante"><span
+                            class="fa fa-download"></span></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Factura N° {{NÚMERO DE FACTURA}}</div>
+                <div class="card-body">
+                    <h4 class="card-title font-17 letra-negra" title="{{NOMBRE_CLIENTE}}">Cliente:
+                        {{NOMBRE_CLIENTE}}</h4>
+
+                    <p class="card-text fw-bold letra-negra m12t">Productos</p>
+                    <li class="letra-negra p12L m12t">{{PRODUCTO_1}}</li>
+                    <li class="letra-negra p12L m12t">{{PRODUCTO_2}}</li>
+                    <p class="letra-negra font-9 m12t">{{FECHA_COMPRA}}</p>
+                    <div class="flex-end ">
+                        <a href="" class=" letra-negra font-12 m12t">Ver más</a>
+                    </div>
+
+
+                </div>
+                <div class="card-footer p10">
+                    <button class="btn btn-primary" title="Imprimir comprobante"><span class="fa fa-print"></span>
+                    </button>
+                    <button class="btn btn-primary" title="Compartir comprobante"><span
+                            class="fa fa-share-nodes"></span></button>
+                    <button class="btn btn-primary" title="Descargar comprobante"><span
+                            class="fa fa-download"></span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="hide_mobile ">
+        <div class="info">
+            <h5 class="letra-blanca">Compañia</h5>
+            <div class="flex contactos">
+                <p class="font-17">Sobre nosotros</p>
+                <p class="font-17">Nuestros servicios</p>
+                <p class="font-17">Politica de privacidad</p>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Seguinos en las Redes</h5>
+            <div class="flex redes">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+        </div>
+        <div class="info">
+            <h5 class="letra-blanca">Contactanos</h5>
+            <div class="flex contactos">
+                <p class="font-17"><span class="fa-regular fa-envelope"></span> Contacto.innovplast@gmail.com</p>
+                <p class="font-17"><span class="fa-brands fa-whatsapp"></span>+54 11 7018-8136</p>
+            </div>
+        </div>
+
+    </footer>
+    <div class="show_derechos">
+        <div class="derechos_autores">
+            <p class="font-12"><i class="fa-regular fa-copyright"></i>2024 ACME - Todos los derechos reservados</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/acciones.js"></script>
+</body>
+
+</html>
